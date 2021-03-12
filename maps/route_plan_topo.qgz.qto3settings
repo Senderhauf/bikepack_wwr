@@ -1,0 +1,440 @@
+{
+  "LAYERS": [
+    {
+      "geomType": 3,
+      "layerId": "extent_all_2cb7a593_c2ee_425e_a8ff_4dc72c40203e",
+      "name": "extent_all",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_Seg_8___waypoints_v1_waypoints_6f251770_6b21_4466_8088_cbd9ee63646d_reproj_esri_102003_e0e57ec3_ea11_4ab0_9566_bb9dd0cd5622",
+      "name": "WWR_Seg_8___waypoints_v1_waypoints",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "WWR_Seg_8___Grand_Canyon_Park_AZ_to_Globe_AZ_SoBo_v1_tracks_e7e68319_3542_47df_9cbd_11b0e19b0642_reproj_esri_102003_3c02d0e2_b1f1_4e0d_9c0c_b3bfc979508a",
+      "name": "WWR_Seg_8___Grand_Canyon_Park_AZ_to_Globe_AZ_SoBo_v1_tracks_reproj_esri_102003",
+      "properties": {
+        "checkBox_Clickable": true,
+        "checkBox_Clip": true,
+        "checkBox_ExportAttrs": false,
+        "checkBox_Visible": true,
+        "comboBox_Label": null,
+        "comboBox_ObjectType": "Line",
+        "comboBox_altitudeMode": null,
+        "fieldExpressionWidget_altitude": "0",
+        "labelHeightWidget": {},
+        "radioButton_IntersectingFeatures": true,
+        "radioButton_zValue": true,
+        "styleWidget0": {
+          "comboData": 1,
+          "comboText": "Feature style",
+          "editText": "",
+          "type": 2
+        },
+        "styleWidget1": {
+          "comboData": 1,
+          "comboText": "Feature style",
+          "editText": "",
+          "type": 5
+        },
+        "styleWidget2": {
+          "checkBox": false,
+          "type": 9
+        },
+        "styleWidget3": {},
+        "styleWidget4": {},
+        "styleWidget5": {}
+      },
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_Seg_8___Grand_Canyon_Park_AZ_to_Globe_AZ_SoBo_v1_track_points_046603f6_8793_4067_b66f_908de979e0d5_reproj_esri_102003_8af8829f_314e_41ae_a8da_5e08aace9473",
+      "name": "WWR_Seg_8___Grand_Canyon_Park_AZ_to_Globe_AZ_SoBo_v1_track_points_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_Seg_7___waypoints_v1_waypoints_60ed206c_a628_4832_868d_3ed893a1f649_reproj_esri_102003_c52450b3_a6f4_4786_904d_38e309f4786b",
+      "name": "WWR_Seg_7___waypoints_v1_waypoints_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "WWR_Seg_7___Kanab_UT_to_Grand_Canyon_Park_AZ_SoBo_v1_tracks_98a4b5ce_3663_40fc_96e4_8fe4146044f8_reproj_esri_102003_a87ca4d3_08fa_4af3_9b61_081c57e20c4b",
+      "name": "WWR_Seg_7___Kanab_UT_to_Grand_Canyon_Park_AZ_SoBo_v1_tracks_98a4b5ce_3663_40fc_96e4_8fe4146044f8_reproj_esri_102003",
+      "properties": {
+        "checkBox_Clickable": true,
+        "checkBox_Clip": true,
+        "checkBox_ExportAttrs": false,
+        "checkBox_Visible": true,
+        "comboBox_Label": null,
+        "comboBox_ObjectType": "Line",
+        "comboBox_altitudeMode": null,
+        "fieldExpressionWidget_altitude": "0",
+        "labelHeightWidget": {},
+        "radioButton_IntersectingFeatures": true,
+        "radioButton_zValue": true,
+        "styleWidget0": {
+          "comboData": 1,
+          "comboText": "Feature style",
+          "editText": "",
+          "type": 2
+        },
+        "styleWidget1": {
+          "comboData": 1,
+          "comboText": "Feature style",
+          "editText": "",
+          "type": 5
+        },
+        "styleWidget2": {
+          "checkBox": false,
+          "type": 9
+        },
+        "styleWidget3": {},
+        "styleWidget4": {},
+        "styleWidget5": {}
+      },
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_Seg_7___Kanab_UT_to_Grand_Canyon_Park_AZ_SoBo_v1_track_points_5fda75c6_6211_4196_8f4c_bf51241ecc7d_reproj_esri_102003_09819a3c_bbbc_4e44_a67b_df359627162d",
+      "name": "WWR_Seg_7___Kanab_UT_to_Grand_Canyon_Park_AZ_SoBo_v1_track_points_5fda75c6_6211_4196_8f4c_bf51241ecc7d_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_Seg_6___waypoints_v1_waypoints_c128581d_e0d6_406e_a008_c1c826378bb4_reproj_esri_102003_a40b3197_187e_4674_a5d7_8a4798103baa",
+      "name": "WWR_Seg_6___waypoints_v1_waypoints_c128581d_e0d6_406e_a008_c1c826378bb4_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "WWR_Seg_6___Soldier_Summit_UT_to_Kanab_UT_SoBo_v1_tracks_59e88e4a_94c2_4a83_a6c9_6383f3a4661b_reproj_esri_102003_bf95dec9_cb40_4a25_9a78_a7a0c9ba7995",
+      "name": "WWR_Seg_6___Soldier_Summit_UT_to_Kanab_UT_SoBo_v1_tracks_59e88e4a_94c2_4a83_a6c9_6383f3a4661b_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_Seg_6___Soldier_Summit_UT_to_Kanab_UT_SoBo_v1_track_points_e35f6182_d100_403d_bb45_0cfd57c4f321_reproj_esri_102003_7ee45e7c_0c54_4c82_bdcc_a333c99ee324",
+      "name": "WWR_Seg_6___Soldier_Summit_UT_to_Kanab_UT_SoBo_v1_track_points_e35f6182_d100_403d_bb45_0cfd57c4f321_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_Seg_5___waypoints_v1_waypoints_03935101_5e17_4f39_9051_54ef19c22931_reproj_esri_102003_d7bace89_e7a9_4b48_99af_254713d1ec89",
+      "name": "WWR_Seg_5___waypoints_v1_waypoints_03935101_5e17_4f39_9051_54ef19c22931_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "WWR_Seg_5___Idaho_border_to_Soldier_Summit_UT_SoBo_v1_tracks_4f34d1f4_7cbd_4a57_97f6_faf6e040d58e_reproj_esri_102003_48640967_3373_4e2f_b8d2_1fd23bdb02fd",
+      "name": "WWR_Seg_5___Idaho_border_to_Soldier_Summit_UT_SoBo_v1_tracks_4f34d1f4_7cbd_4a57_97f6_faf6e040d58e_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_Seg_5___Idaho_border_to_Soldier_Summit_UT_SoBo_v1_track_points_22399608_c956_4ca2_95e1_d52f66ca8aa7_reproj_esri_102003_9fa0ae34_59c2_4eb5_b87e_046034de28cd",
+      "name": "WWR_Seg_5___Idaho_border_to_Soldier_Summit_UT_SoBo_v1_track_points_22399608_c956_4ca2_95e1_d52f66ca8aa7_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "WWR_alt_UT___Mirror_Lake_Alt_tracks_b2507276_d84f_45a7_a87a_c4b9e3d21665_reproj_esri_102003_ae00eecf_f311_4ebe_9caf_f5f458cceb98",
+      "name": "WWR_alt_UT___Mirror_Lake_Alt_tracks_b2507276_d84f_45a7_a87a_c4b9e3d21665_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_alt_UT___Mirror_Lake_Alt_track_points_7d0dbb99_50a2_4d2f_965a_2c5a7bd26c8b_reproj_esri_102003_e9d31088_2c2e_4c95_bb9a_f4ad3f69185b",
+      "name": "WWR_alt_UT___Mirror_Lake_Alt_track_points_7d0dbb99_50a2_4d2f_965a_2c5a7bd26c8b_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "WWR_alt_UT___Mirror_Lake_Alt_Shortcut_tracks_ec2ef6db_19d6_4176_88ea_f070e68d8c50_reproj_esri_102003_5bc2def1_8fd2_4464_96a9_583914a4a787",
+      "name": "WWR_alt_UT___Mirror_Lake_Alt_Shortcut_tracks_ec2ef6db_19d6_4176_88ea_f070e68d8c50_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_alt_UT___Mirror_Lake_Alt_Shortcut_track_points_31b8e9d5_83b4_4470_8c7f_aafc4fc1965e_reproj_esri_102003_5c45694f_544e_4429_bbea_1088c873fc16",
+      "name": "WWR_alt_UT___Mirror_Lake_Alt_Shortcut_track_points_31b8e9d5_83b4_4470_8c7f_aafc4fc1965e_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "WWR_alt_AZ___Kaibab_Alt_v1_tracks_db568d89_39dd_4ec8_829f_50258bf94118_reproj_esri_102003_cb50e174_390b_4f1a_bba6_d0ce47dab125",
+      "name": "WWR_alt_AZ___Kaibab_Alt_v1_tracks_db568d89_39dd_4ec8_829f_50258bf94118_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_alt_AZ___Kaibab_Alt_v1_track_points_a20b285f_bb15_4289_a996_899718b0e6bc_reproj_esri_102003_465b047e_7f2b_459f_9743_0223495c8e23",
+      "name": "WWR_alt_AZ___Kaibab_Alt_v1_track_points_a20b285f_bb15_4289_a996_899718b0e6bc_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "WWR_alt_AZ___AZT_link_v1_tracks_bca71486_5ad6_426d_ac08_8a03b4e8e935_reproj_esri_102003_9a5dd137_b52b_450c_b15f_9bb60ae770eb",
+      "name": "WWR_alt_AZ___AZT_link_v1_tracks_bca71486_5ad6_426d_ac08_8a03b4e8e935_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "WWR_alt_AZ___AZT_link_v1_track_points_745dc011_1e47_4b75_9410_4c28f79d2d42_reproj_esri_102003_ed701d46_ae60_408e_beb0_c930f078ffc1",
+      "name": "WWR_alt_AZ___AZT_link_v1_track_points_745dc011_1e47_4b75_9410_4c28f79d2d42_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "BearsEars_Seg2_v1_track_points_988cfb65_fe6a_4ec1_bd4a_1b98f2ef240c_reproj_esri_102003_a818b1f9_13c5_49ef_8233_26ae58a21345",
+      "name": "BearsEars_Seg2_v1_track_points_988cfb65_fe6a_4ec1_bd4a_1b98f2ef240c_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "BearsEars_waypoints_v1_tracks_15b0d257_6022_4f56_8d25_b7e2a3cd4e96_reproj_esri_102003_e35a7202_e563_4218_b540_041154a1d632",
+      "name": "BearsEars_waypoints_v1_tracks_15b0d257_6022_4f56_8d25_b7e2a3cd4e96_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "BearsEars_waypoints_v1_track_points_9666ab37_654c_4d42_9d89_99151d282e75_reproj_esri_102003_9f1c225f_9c23_48c2_995c_9d9944cc4e32",
+      "name": "BearsEars_waypoints_v1_track_points_9666ab37_654c_4d42_9d89_99151d282e75_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "BearsEars_waypoints_v1_waypoints_5373eafc_9c18_4ff6_8d6e_2b609dcfc840_reproj_esri_102003_f3437e0f_8bd9_4b68_a9e2_aedaf4e27181",
+      "name": "BearsEars_waypoints_v1_waypoints_5373eafc_9c18_4ff6_8d6e_2b609dcfc840_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "BearsEars_Seg4_v1_tracks_293b523a_c244_4803_b8aa_efce1b30011c_reproj_esri_102003_464c0186_1df7_4fd9_a69b_323231423f47",
+      "name": "BearsEars_Seg4_v1_tracks_293b523a_c244_4803_b8aa_efce1b30011c_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "BearsEars_Seg4_v1_track_points_b1156312_7aa7_4940_8443_e823ab4c92ea_reproj_esri_102003_8b0171d3_9193_4d14_9e39_80ee2093af7a",
+      "name": "BearsEars_Seg4_v1_track_points_b1156312_7aa7_4940_8443_e823ab4c92ea_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "BearsEars_Seg3_v1_tracks_b7a6794c_f03d_4bc3_94c1_e32ca80171bc_reproj_esri_102003_8ccf03fc_e58d_4ad9_9a7b_f83946526825",
+      "name": "BearsEars_Seg3_v1_tracks_b7a6794c_f03d_4bc3_94c1_e32ca80171bc_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "BearsEars_Seg3_v1_track_points_7e4a4fcf_a88c_4a4e_87ce_5bfef599d593_reproj_esri_102003_c69f130b_1960_441b_87ae_81365961b4f0",
+      "name": "BearsEars_Seg3_v1_track_points_7e4a4fcf_a88c_4a4e_87ce_5bfef599d593_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "BearsEars_Seg2a_v1_tracks_7785a637_c1d8_45b3_9260_d1a98b0e77c4_reproj_esri_102003_e2091024_7f75_42ab_858f_99c509de3228",
+      "name": "BearsEars_Seg2a_v1_tracks_7785a637_c1d8_45b3_9260_d1a98b0e77c4_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "BearsEars_Seg2a_v1_track_points_f988b1ac_84ff_4f24_a740_3231fe5ea3b7_reproj_esri_102003_92e6141d_2686_4f6b_876c_d3ca77ca4923",
+      "name": "BearsEars_Seg2a_v1_track_points_f988b1ac_84ff_4f24_a740_3231fe5ea3b7_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "BearsEars_Seg2a_SanRafaelAlt_v1_tracks_e006ec24_0d6e_4200_bf81_9b8b5236ffb8_reproj_esri_102003_17c2fa8b_a033_4cb8_90d5_4ec396c7b987",
+      "name": "BearsEars_Seg2a_SanRafaelAlt_v1_tracks_e006ec24_0d6e_4200_bf81_9b8b5236ffb8_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "BearsEars_Seg2a_SanRafaelAlt_v1_track_points_309d75a1_8720_4223_bfd5_14671df74b22_reproj_esri_102003_7e19dfc9_62ad_4849_b653_efdf174c1d09",
+      "name": "BearsEars_Seg2a_SanRafaelAlt_v1_track_points_309d75a1_8720_4223_bfd5_14671df74b22_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "BearsEars_Seg2_v1_tracks_e901454c_fc71_4400_a822_d1bb4c01e400_reproj_esri_102003_0bda2c82_0861_4ff0_bd64_9b2b5a270876",
+      "name": "BearsEars_Seg2_v1_tracks_e901454c_fc71_4400_a822_d1bb4c01e400_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "BearsEars_Seg2_PPalt_v1_tracks_011cdd60_756e_4fc9_aff3_143b3295cc84_reproj_esri_102003_3abfb041_3990_422a_b343_ff7a4a3c9df1",
+      "name": "BearsEars_Seg2_PPalt_v1_tracks_011cdd60_756e_4fc9_aff3_143b3295cc84_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "BearsEars_Seg2_PPalt_v1_track_points_b493a0e5_6460_4657_b888_397f33ee8447_reproj_esri_102003_56659fc6_ee04_4c06_8b44_8b6ac72bcfca",
+      "name": "BearsEars_Seg2_PPalt_v1_track_points_b493a0e5_6460_4657_b888_397f33ee8447_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "BearsEars_Seg1_v1_tracks_b3665b1f_9474_471c_b6d3_b0f89d9d4b92_reproj_esri_102003_2c0f2d0f_f213_4b50_a4a4_7ec899a72bc4",
+      "name": "BearsEars_Seg1_v1_tracks_b3665b1f_9474_471c_b6d3_b0f89d9d4b92_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "BearsEars_Seg1_v1_track_points_254fb101_f5d7_41dc_8158_57a6e87f2dd3_reproj_esri_102003_e6108e07_dc97_470c_b6fa_3370af374c48",
+      "name": "BearsEars_Seg1_v1_track_points_254fb101_f5d7_41dc_8158_57a6e87f2dd3_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 2,
+      "layerId": "AZT800_2021v5_tracks_3a429768_7f4a_4e38_b012_01998f4111da_reproj_esri_102003_525612f0_00ff_41c2_b7bd_d6b13ed98f84",
+      "name": "AZT800_2021v5_tracks_3a429768_7f4a_4e38_b012_01998f4111da_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 1,
+      "layerId": "AZT800_2021v5_track_points_40df8769_d262_4785_ae53_4bb67e5e5061_reproj_esri_102003_ff080650_f13e_48a9_8b0d_1f9152d5f471",
+      "name": "AZT800_2021v5_track_points_40df8769_d262_4785_ae53_4bb67e5e5061_reproj_esri_102003",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 3,
+      "layerId": "Dissolved_e7d776b9_5e70_411b_8e2a_db93b6ee742e",
+      "name": "extent_buffer_all_routes",
+      "properties": {},
+      "visible": false
+    },
+    {
+      "geomType": 0,
+      "layerId": "3dep_elevation_bf11834a_fc80_4203_9a7e_548af1d3d811",
+      "name": "3dep_elevation_dem",
+      "properties": {
+        "checkBox_Clickable": true,
+        "checkBox_Clip": false,
+        "checkBox_Frame": false,
+        "checkBox_Shading": true,
+        "checkBox_Sides": true,
+        "checkBox_Surroundings": false,
+        "checkBox_TransparentBackground": false,
+        "checkBox_Visible": true,
+        "checkBox_Wireframe": false,
+        "colorButton_Color": "0x000000",
+        "comboBox_ClipLayer": "extent_all_2cb7a593_c2ee_425e_a8ff_4dc72c40203e",
+        "comboBox_TextureSize": 1024,
+        "horizontalSlider_DEMSize": 2,
+        "lineEdit_ImageFile": "",
+        "radioButton_MapCanvas": true,
+        "spinBox_Opacity": 100,
+        "spinBox_Roughening": 1,
+        "spinBox_Size": 3,
+        "toolButton_EdgeColor": "0x000000",
+        "toolButton_SideColor": "0xccbbaa",
+        "toolButton_WireframeColor": "0x000000"
+      },
+      "visible": true
+    },
+    {
+      "geomType": 0,
+      "layerId": "3dep_hillshade_3c0851d8_0e82_4d80_b27e_73bedb323937",
+      "name": "3dep_hillshade",
+      "properties": {
+        "checkBox_Clickable": true,
+        "checkBox_Clip": false,
+        "checkBox_Frame": false,
+        "checkBox_Shading": true,
+        "checkBox_Sides": true,
+        "checkBox_Surroundings": false,
+        "checkBox_TransparentBackground": false,
+        "checkBox_Visible": true,
+        "checkBox_Wireframe": false,
+        "colorButton_Color": "0x000000",
+        "comboBox_ClipLayer": "extent_all_2cb7a593_c2ee_425e_a8ff_4dc72c40203e",
+        "comboBox_TextureSize": 1024,
+        "horizontalSlider_DEMSize": 2,
+        "lineEdit_ImageFile": "",
+        "radioButton_MapCanvas": true,
+        "spinBox_Opacity": 100,
+        "spinBox_Roughening": 1,
+        "spinBox_Size": 3,
+        "toolButton_EdgeColor": "0x000000",
+        "toolButton_SideColor": "0xccbbaa",
+        "toolButton_WireframeColor": "0x000000"
+      },
+      "visible": false
+    },
+    {
+      "geomType": 0,
+      "layerId": "FLAT",
+      "name": "Flat Plane",
+      "properties": {
+        "checkBox_Clickable": true,
+        "checkBox_Clip": false,
+        "checkBox_Frame": false,
+        "checkBox_Shading": true,
+        "checkBox_Sides": true,
+        "checkBox_Surroundings": false,
+        "checkBox_TransparentBackground": false,
+        "checkBox_Visible": true,
+        "checkBox_Wireframe": false,
+        "colorButton_Color": "0x000000",
+        "comboBox_ClipLayer": "extent_all_2cb7a593_c2ee_425e_a8ff_4dc72c40203e",
+        "comboBox_TextureSize": 1024,
+        "horizontalSlider_DEMSize": 2,
+        "lineEdit_ImageFile": "",
+        "radioButton_MapCanvas": true,
+        "spinBox_Opacity": 100,
+        "spinBox_Roughening": 1,
+        "spinBox_Size": 3,
+        "toolButton_EdgeColor": "0x000000",
+        "toolButton_SideColor": "0xccbbaa",
+        "toolButton_WireframeColor": "0x000000"
+      },
+      "visible": false
+    }
+  ]
+}
