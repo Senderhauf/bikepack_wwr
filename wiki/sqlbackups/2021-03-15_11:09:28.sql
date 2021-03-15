@@ -238,7 +238,7 @@ CREATE TABLE `comment` (
   `comment_data` blob DEFAULT NULL,
   PRIMARY KEY (`comment_id`),
   KEY `comment_hash` (`comment_hash`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -247,7 +247,7 @@ CREATE TABLE `comment` (
 
 LOCK TABLES `comment` WRITE;
 /*!40000 ALTER TABLE `comment` DISABLE KEYS */;
-INSERT INTO `comment` VALUES (1,0,'',NULL);
+INSERT INTO `comment` VALUES (1,0,'',NULL),(2,2102941650,'Created page with \"* [https://www.google.com/maps/place/Fifth+Water+Hot+Springs+Trail+Head/@40.0845424,-111.3549516,15z/data=!4m5!3m4!1s0x0:0xec927f0dd64c32a0!8m2!3d40.0845424!4d-111.3549516 Fif...\"',NULL),(3,-210563547,'/* Gear */',NULL),(4,1305463952,'/* Pre-route */',NULL),(5,1195006863,'Created page with \"== Resources == * [[https://andrewskurka.com/backpacking-trip-planning-checklist-to-do/ Backpack trip planning checklist]]\"',NULL),(6,1789684684,'/* General Resources */',NULL);
 /*!40000 ALTER TABLE `comment` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -265,7 +265,7 @@ CREATE TABLE `content` (
   `content_model` smallint(5) unsigned NOT NULL,
   `content_address` varbinary(255) NOT NULL,
   PRIMARY KEY (`content_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -274,7 +274,7 @@ CREATE TABLE `content` (
 
 LOCK TABLES `content` WRITE;
 /*!40000 ALTER TABLE `content` DISABLE KEYS */;
-INSERT INTO `content` VALUES (1,735,'a5wehuldd0go2uniagwvx66n6c80irq',1,'tt:1'),(2,1511,'fn40iudc4kef546yj7gmxg5ensjq4k5',1,'tt:2'),(3,2194,'g8w4ocv4cpghi5akk7s9gb00ogt0snh',1,'tt:3');
+INSERT INTO `content` VALUES (1,735,'a5wehuldd0go2uniagwvx66n6c80irq',1,'tt:1'),(2,1511,'fn40iudc4kef546yj7gmxg5ensjq4k5',1,'tt:2'),(3,2194,'g8w4ocv4cpghi5akk7s9gb00ogt0snh',1,'tt:3'),(4,2172,'3wcaqot8fhf7n0kz74xvtqrxkaz6n3a',1,'tt:4'),(5,196,'0xwfq91ttzv1r3mrt4p53vv3fqbquz3',1,'tt:5'),(6,2352,'5to3fz1rz7vmes5b4q9k2z7cnlp8x2v',1,'tt:6'),(7,1991,'fsrjbhf07peu6te0166vcgupi1rd4sd',1,'tt:7'),(8,2026,'haccxua1kcm5hjrai14gdu1ylznwnov',1,'tt:8'),(9,2026,'re0spfc30jqkp7y4s3pdqw6t0ckcxod',1,'tt:9'),(10,2055,'e1hscv6jo7h3ukxjmaugw7w7gp67kd2',1,'tt:10'),(11,2056,'ep35viifepln7plgvvze9nnfsld0gto',1,'tt:11'),(12,122,'9rxprrzsom7ryh28njfjbkshfow2qre',1,'tt:12'),(13,120,'fu4r5893tis5780rkmu1kapxuhs4tb2',1,'tt:13'),(14,2204,'6pghvybhd8oo984iutn4uqy0zhpss88',1,'tt:14');
 /*!40000 ALTER TABLE `content` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -322,7 +322,7 @@ CREATE TABLE `externallinks` (
   KEY `el_index` (`el_index`(60)),
   KEY `el_index_60` (`el_index_60`,`el_id`),
   KEY `el_from_index_60` (`el_from`,`el_index_60`,`el_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -331,7 +331,7 @@ CREATE TABLE `externallinks` (
 
 LOCK TABLES `externallinks` WRITE;
 /*!40000 ALTER TABLE `externallinks` DISABLE KEYS */;
-INSERT INTO `externallinks` VALUES (1,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents','https://org.mediawiki.www./wiki/Special:MyLanguage/Help:Contents','https://org.mediawiki.www./wiki/Special:MyLanguage/Help:Cont'),(2,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:Configuration_settings','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:Co'),(3,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:FAQ','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:FA'),(4,1,'https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce','https://org.wikimedia.lists./mailman/listinfo/mediawiki-announce','https://org.wikimedia.lists./mailman/listinfo/mediawiki-anno'),(5,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources','https://org.mediawiki.www./wiki/Special:MyLanguage/Localisation#Translation_resources','https://org.mediawiki.www./wiki/Special:MyLanguage/Localisat'),(6,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:Combating_spam','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:Co');
+INSERT INTO `externallinks` VALUES (1,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents','https://org.mediawiki.www./wiki/Special:MyLanguage/Help:Contents','https://org.mediawiki.www./wiki/Special:MyLanguage/Help:Cont'),(3,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:FAQ','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:FA'),(7,2,'https://www.google.com/maps/place/Fifth+Water+Hot+Springs+Trail+Head/@40.0845424,-111.3549516,15z/data=!4m5!3m4!1s0x0:0xec927f0dd64c32a0!8m2!3d40.0845424!4d-111.3549516','https://com.google.www./maps/place/Fifth+Water+Hot+Springs+Trail+Head/@40.0845424,-111.3549516,15z/data=!4m5!3m4!1s0x0:0xec927f0dd64c32a0!8m2!3d40.0845424!4d-111.3549516','https://com.google.www./maps/place/Fifth+Water+Hot+Springs+T'),(8,1,'https://bikepacking.com/plan/route-planning-guide/','https://com.bikepacking./plan/route-planning-guide/','https://com.bikepacking./plan/route-planning-guide/'),(9,3,'https://andrewskurka.com/backpacking-trip-planning-checklist-to-do/','https://com.andrewskurka./backpacking-trip-planning-checklist-to-do/','https://com.andrewskurka./backpacking-trip-planning-checklis'),(10,1,'https://exploringwild.com/bikepacking-home/','https://com.exploringwild./bikepacking-home/','https://com.exploringwild./bikepacking-home/');
 /*!40000 ALTER TABLE `externallinks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -622,7 +622,7 @@ CREATE TABLE `job` (
   KEY `job_cmd_token_id` (`job_cmd`,`job_token`,`job_id`),
   KEY `job_cmd` (`job_cmd`,`job_namespace`,`job_title`,`job_params`(128)),
   KEY `job_timestamp` (`job_timestamp`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -631,7 +631,6 @@ CREATE TABLE `job` (
 
 LOCK TABLES `job` WRITE;
 /*!40000 ALTER TABLE `job` DISABLE KEYS */;
-INSERT INTO `job` VALUES (6,'recentChangesUpdate',-1,'RecentChanges','20210314224244','a:4:{s:4:\"type\";s:11:\"cacheUpdate\";s:9:\"namespace\";i:-1;s:5:\"title\";s:13:\"RecentChanges\";s:9:\"requestId\";s:24:\"d37811c14ec240baf7d7d4fa\";}',77770903,0,'',NULL,'p42glrsl783wj55io7lxhmhxf0e5db5');
 /*!40000 ALTER TABLE `job` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -708,7 +707,7 @@ CREATE TABLE `log_search` (
 
 LOCK TABLES `log_search` WRITE;
 /*!40000 ALTER TABLE `log_search` DISABLE KEYS */;
-INSERT INTO `log_search` VALUES ('associated_rev_id','1',1);
+INSERT INTO `log_search` VALUES ('associated_rev_id','1',1),('associated_rev_id','12',3),('associated_rev_id','5',2);
 /*!40000 ALTER TABLE `log_search` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -739,7 +738,7 @@ CREATE TABLE `logging` (
   KEY `log_actor_type_time` (`log_actor`,`log_type`,`log_timestamp`),
   KEY `log_page_id_time` (`log_page`,`log_timestamp`),
   KEY `log_type_action` (`log_type`,`log_action`,`log_timestamp`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -748,7 +747,7 @@ CREATE TABLE `logging` (
 
 LOCK TABLES `logging` WRITE;
 /*!40000 ALTER TABLE `logging` DISABLE KEYS */;
-INSERT INTO `logging` VALUES (1,'create','create','20210314021617',2,0,'Main_Page',1,1,'a:1:{s:17:\"associated_rev_id\";i:1;}',0);
+INSERT INTO `logging` VALUES (1,'create','create','20210314021617',2,0,'Main_Page',1,1,'a:1:{s:17:\"associated_rev_id\";i:1;}',0),(2,'create','create','20210315101036',1,0,'Points_of_Interest',2,2,'a:1:{s:17:\"associated_rev_id\";i:5;}',0),(3,'create','create','20210315155803',1,0,'Pre-Travel_Checklist',3,5,'a:1:{s:17:\"associated_rev_id\";i:12;}',0);
 /*!40000 ALTER TABLE `logging` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -867,7 +866,7 @@ CREATE TABLE `page` (
   KEY `page_random` (`page_random`),
   KEY `page_len` (`page_len`),
   KEY `page_redirect_namespace_len` (`page_is_redirect`,`page_namespace`,`page_len`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -876,7 +875,7 @@ CREATE TABLE `page` (
 
 LOCK TABLES `page` WRITE;
 /*!40000 ALTER TABLE `page` DISABLE KEYS */;
-INSERT INTO `page` VALUES (1,0,'Main_Page','',0,0,0.725452216924,'20210314224244','20210314224244',3,2194,'wikitext',NULL);
+INSERT INTO `page` VALUES (1,0,'Main_Page','',0,0,0.725452216924,'20210315160419','20210315160419',14,2204,'wikitext',NULL),(2,0,'Points_of_Interest','',0,1,0.151536398438,'20210315101036','20210315101036',5,196,'wikitext',NULL),(3,0,'Pre-Travel_Checklist','',0,0,0.652630276914,'20210315155815','20210315155815',13,120,'wikitext',NULL);
 /*!40000 ALTER TABLE `page` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -963,7 +962,7 @@ CREATE TABLE `pagelinks` (
 
 LOCK TABLES `pagelinks` WRITE;
 /*!40000 ALTER TABLE `pagelinks` DISABLE KEYS */;
-INSERT INTO `pagelinks` VALUES (1,0,0,'Bike_setup'),(1,0,0,'Camping_Setup'),(1,0,0,'Checklist'),(1,0,0,'Clothes'),(1,0,0,'Food_and_Water'),(1,0,0,'Food_prep'),(1,0,0,'General'),(1,0,0,'National_Parks'),(1,0,0,'Navigation'),(1,0,0,'Permits_and_Registrations'),(1,0,0,'Recharge_Electronics'),(1,0,0,'Route_1'),(1,0,0,'Route_2'),(1,0,0,'Sleep'),(1,0,0,'Table_of_contents'),(1,0,0,'Weather');
+INSERT INTO `pagelinks` VALUES (1,0,0,'Bike_setup'),(1,0,0,'Camping_Setup'),(1,0,0,'Clothes'),(1,0,0,'Food_and_Water'),(1,0,0,'Food_prep'),(1,0,0,'General'),(1,0,0,'Navigation'),(1,0,0,'Permits_and_Registrations'),(1,0,0,'Points_of_Interest'),(1,0,0,'Pre-Travel_Checklist'),(1,0,0,'Recharge_Electronics'),(1,0,0,'Route_1'),(1,0,0,'Route_2'),(1,0,0,'Sleep'),(1,0,0,'Table_of_contents'),(1,0,0,'Test_runs'),(1,0,0,'Training'),(1,0,0,'Weather');
 /*!40000 ALTER TABLE `pagelinks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1041,7 +1040,7 @@ CREATE TABLE `querycache_info` (
 
 LOCK TABLES `querycache_info` WRITE;
 /*!40000 ALTER TABLE `querycache_info` DISABLE KEYS */;
-INSERT INTO `querycache_info` VALUES ('activeusers','20210314215812');
+INSERT INTO `querycache_info` VALUES ('activeusers','20210315160419');
 /*!40000 ALTER TABLE `querycache_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1116,7 +1115,7 @@ CREATE TABLE `recentchanges` (
   KEY `rc_actor` (`rc_actor`,`rc_timestamp`),
   KEY `rc_name_type_patrolled_timestamp` (`rc_namespace`,`rc_type`,`rc_patrolled`,`rc_timestamp`),
   KEY `rc_this_oldid` (`rc_this_oldid`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1125,7 +1124,7 @@ CREATE TABLE `recentchanges` (
 
 LOCK TABLES `recentchanges` WRITE;
 /*!40000 ALTER TABLE `recentchanges` DISABLE KEYS */;
-INSERT INTO `recentchanges` VALUES (1,'20210314215812',1,0,'Main_Page',1,0,0,0,1,2,1,0,'mw.edit',2,'172.27.0.1',735,1511,0,0,NULL,'',''),(2,'20210314224244',1,0,'Main_Page',1,0,0,0,1,3,2,0,'mw.edit',2,'172.27.0.1',1511,2194,0,0,NULL,'','');
+INSERT INTO `recentchanges` VALUES (1,'20210314215812',1,0,'Main_Page',1,0,0,0,1,2,1,0,'mw.edit',2,'172.27.0.1',735,1511,0,0,NULL,'',''),(2,'20210314224244',1,0,'Main_Page',1,0,0,0,1,3,2,0,'mw.edit',2,'172.27.0.1',1511,2194,0,0,NULL,'',''),(3,'20210315100808',1,0,'Main_Page',1,0,0,0,1,4,3,0,'mw.edit',2,'172.27.0.1',2194,2172,0,0,NULL,'',''),(4,'20210315101036',1,0,'Points_of_Interest',2,0,0,1,2,5,0,1,'mw.new',2,'172.27.0.1',0,196,0,0,NULL,'',''),(5,'20210315154745',1,0,'Main_Page',1,0,0,0,1,6,4,0,'mw.edit',2,'172.27.0.1',2172,2352,0,0,NULL,'',''),(6,'20210315155017',1,0,'Main_Page',1,0,0,0,1,7,6,0,'mw.edit',2,'172.27.0.1',2352,1991,0,0,NULL,'',''),(7,'20210315155226',1,0,'Main_Page',3,0,0,0,1,8,7,0,'mw.edit',2,'172.27.0.1',1991,2026,0,0,NULL,'',''),(8,'20210315155319',1,0,'Main_Page',4,0,0,0,1,9,8,0,'mw.edit',2,'172.27.0.1',2026,2026,0,0,NULL,'',''),(9,'20210315155506',1,0,'Main_Page',1,0,0,0,1,10,9,0,'mw.edit',2,'172.27.0.1',2026,2055,0,0,NULL,'',''),(10,'20210315155539',1,0,'Main_Page',1,0,0,0,1,11,10,0,'mw.edit',2,'172.27.0.1',2055,2056,0,0,NULL,'',''),(11,'20210315155803',1,0,'Pre-Travel_Checklist',5,0,0,1,3,12,0,1,'mw.new',2,'172.27.0.1',0,122,0,0,NULL,'',''),(12,'20210315155815',1,0,'Pre-Travel_Checklist',1,0,0,0,3,13,12,0,'mw.edit',2,'172.27.0.1',122,120,0,0,NULL,'',''),(13,'20210315160419',1,0,'Main_Page',6,0,0,0,1,14,11,0,'mw.edit',2,'172.27.0.1',2056,2204,0,0,NULL,'','');
 /*!40000 ALTER TABLE `recentchanges` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1180,7 +1179,7 @@ CREATE TABLE `revision` (
   KEY `page_timestamp` (`rev_page`,`rev_timestamp`),
   KEY `rev_actor_timestamp` (`rev_actor`,`rev_timestamp`,`rev_id`),
   KEY `rev_page_actor_timestamp` (`rev_page`,`rev_actor`,`rev_timestamp`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=binary MAX_ROWS=10000000 AVG_ROW_LENGTH=1024;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=binary MAX_ROWS=10000000 AVG_ROW_LENGTH=1024;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1189,7 +1188,7 @@ CREATE TABLE `revision` (
 
 LOCK TABLES `revision` WRITE;
 /*!40000 ALTER TABLE `revision` DISABLE KEYS */;
-INSERT INTO `revision` VALUES (1,1,0,0,'20210314021617',0,0,735,0,'a5wehuldd0go2uniagwvx66n6c80irq'),(2,1,0,0,'20210314215812',0,0,1511,1,'fn40iudc4kef546yj7gmxg5ensjq4k5'),(3,1,0,0,'20210314224244',0,0,2194,2,'g8w4ocv4cpghi5akk7s9gb00ogt0snh');
+INSERT INTO `revision` VALUES (1,1,0,0,'20210314021617',0,0,735,0,'a5wehuldd0go2uniagwvx66n6c80irq'),(2,1,0,0,'20210314215812',0,0,1511,1,'fn40iudc4kef546yj7gmxg5ensjq4k5'),(3,1,0,0,'20210314224244',0,0,2194,2,'g8w4ocv4cpghi5akk7s9gb00ogt0snh'),(4,1,0,0,'20210315100808',0,0,2172,3,'3wcaqot8fhf7n0kz74xvtqrxkaz6n3a'),(5,2,0,0,'20210315101036',0,0,196,0,'0xwfq91ttzv1r3mrt4p53vv3fqbquz3'),(6,1,0,0,'20210315154745',0,0,2352,4,'5to3fz1rz7vmes5b4q9k2z7cnlp8x2v'),(7,1,0,0,'20210315155017',0,0,1991,6,'fsrjbhf07peu6te0166vcgupi1rd4sd'),(8,1,0,0,'20210315155226',0,0,2026,7,'haccxua1kcm5hjrai14gdu1ylznwnov'),(9,1,0,0,'20210315155319',0,0,2026,8,'re0spfc30jqkp7y4s3pdqw6t0ckcxod'),(10,1,0,0,'20210315155506',0,0,2055,9,'e1hscv6jo7h3ukxjmaugw7w7gp67kd2'),(11,1,0,0,'20210315155539',0,0,2056,10,'ep35viifepln7plgvvze9nnfsld0gto'),(12,3,0,0,'20210315155803',0,0,122,0,'9rxprrzsom7ryh28njfjbkshfow2qre'),(13,3,0,0,'20210315155815',0,0,120,12,'fu4r5893tis5780rkmu1kapxuhs4tb2'),(14,1,0,0,'20210315160419',0,0,2204,11,'6pghvybhd8oo984iutn4uqy0zhpss88');
 /*!40000 ALTER TABLE `revision` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1218,7 +1217,7 @@ CREATE TABLE `revision_actor_temp` (
 
 LOCK TABLES `revision_actor_temp` WRITE;
 /*!40000 ALTER TABLE `revision_actor_temp` DISABLE KEYS */;
-INSERT INTO `revision_actor_temp` VALUES (2,1,'20210314215812',1),(3,1,'20210314224244',1),(1,2,'20210314021617',1);
+INSERT INTO `revision_actor_temp` VALUES (2,1,'20210314215812',1),(3,1,'20210314224244',1),(4,1,'20210315100808',1),(6,1,'20210315154745',1),(7,1,'20210315155017',1),(8,1,'20210315155226',1),(9,1,'20210315155319',1),(10,1,'20210315155506',1),(11,1,'20210315155539',1),(14,1,'20210315160419',1),(1,2,'20210314021617',1),(5,1,'20210315101036',2),(12,1,'20210315155803',3),(13,1,'20210315155815',3);
 /*!40000 ALTER TABLE `revision_actor_temp` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1243,7 +1242,7 @@ CREATE TABLE `revision_comment_temp` (
 
 LOCK TABLES `revision_comment_temp` WRITE;
 /*!40000 ALTER TABLE `revision_comment_temp` DISABLE KEYS */;
-INSERT INTO `revision_comment_temp` VALUES (1,1),(2,1),(3,1);
+INSERT INTO `revision_comment_temp` VALUES (1,1),(2,1),(3,1),(4,1),(5,2),(6,1),(7,1),(8,3),(9,4),(10,1),(11,1),(12,5),(13,1),(14,6);
 /*!40000 ALTER TABLE `revision_comment_temp` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1270,7 +1269,7 @@ CREATE TABLE `searchindex` (
 
 LOCK TABLES `searchindex` WRITE;
 /*!40000 ALTER TABLE `searchindex` DISABLE KEYS */;
-INSERT INTO `searchindex` VALUES (1,'main page',' consult theu800 user user\'su800 guide foru800 information onu800 using theu800 wiki software.  welcome tou800 theu800 wwru800 \'21u800 au800 site foru800 planning andu800 documenting au800 bikepacking trip viau800 theu800 western wildlands route inu800 2021.  visit theu800 table ofu800 contents foru800 au800 listing ofu800 categories. route information route information route information maps itinerary andu800 alternate routes. ; route 1u800 primary route option from flagstaff azu800 - slcu800 utu800. ; route 2u800 secondary route option loop starting atu800 slcu800 utu800 looping bears ears then back tou800 slcu800 utu800. logistics logistics logistics ; navigation primary andu800 secondary means ofu800 navigation. ; food andu800 water points foru800 resupply ofu800 food andu800 water. ; sleep campsites andu800 emergency rest stops. ; recharge electronics places andu800 methods ofu800 recharging. ; permits andu800 registrations trail camping permits notify local rangers ofu800 route travel insurance etcu800. ; weather possible weather andu800 trail conditions. gear gear gear ; bike setup specs foru800 route current andu800 planned tools spares. ; clothes clothes foru800 allu800 expected conditions. ; camping setup ; food prep stove fuel utensils cookware recipes. ; general first aidu800 bear spray repair kits. points ofu800 interest points ofu800 interest points ofu800 interest ; national parks parks worth stopping atu800 andu800 howu800 tou800 best seeu800 them. preu800-route preu800-route preu800-route ; checklist vacation message email voicemail water plants payu800 bills forward mail etcu800... mediawiki resources mediawiki resources mediawiki resources * configuration settings list * mediawiki faqu800 * mediawiki release mailing list * localise mediawiki foru800 your language * learn howu800 tou800 combat spam onu800 your wiki ');
+INSERT INTO `searchindex` VALUES (1,'main page','  welcome tou800 theu800 wwru800 \'21u800 au800 site foru800 planning andu800 documenting au800 bikepacking trip viau800 theu800 western wildlands route inu800 2021.  visit theu800 table ofu800 contents foru800 au800 listing ofu800 categories. route information route information route information maps itinerary andu800 alternate routes. ; route 1u800 primary route option from flagstaff azu800 - slcu800 utu800. ; route 2u800 secondary route option loop starting atu800 slcu800 utu800 looping bears ears then back tou800 slcu800 utu800. ; points ofu800 interest national parks historical landmarks hotu800 springs swimming holes scenic viewpoints etcu800. logistics logistics logistics ; navigation primary andu800 secondary means ofu800 navigation. ; food andu800 water points foru800 resupply ofu800 food andu800 water. ; sleep campsites andu800 emergency rest stops. ; recharge electronics places andu800 methods ofu800 recharging. ; permits andu800 registrations trail camping permits notify local rangers ofu800 route travel insurance etcu800. ; weather possible weather andu800 trail conditions. gear gear gear ; bike setup specs foru800 route current andu800 planned tools spares. ; clothes clothes foru800 allu800 expected conditions. ; camping setup tent andu800 general sleep system info. ; food prep stove fuel utensils cookware recipes. ; general first aidu800 bear spray repair kits. preu800-route preu800-route preu800-route ; training exercises stretches diet ideas foru800 getting body ready. ; test runs overnighters near home with similar trail material conditions ifu800 possible. ; preu800-travel checklist vacation message email voicemail water plants payu800 bills forward mail etcu800... general resources general resources general resources * bikepackingu82ecomu800 route planning guide * exploring wild blog - au800 comprehensive bikepacking adventure blog byu800 alissa au800 seasoned adventurer. * mediawiki faqu800 * consult theu800 user user\'su800 guide foru800 information onu800 using theu800 mediawiki software used tou800 power this site. '),(2,'points ofu800 interest',' * fifth water hotu800 springs '),(3,'preu800-travel checklist',' resources * backpack trip planning checklist ');
 /*!40000 ALTER TABLE `searchindex` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1325,7 +1324,7 @@ CREATE TABLE `site_stats` (
 
 LOCK TABLES `site_stats` WRITE;
 /*!40000 ALTER TABLE `site_stats` DISABLE KEYS */;
-INSERT INTO `site_stats` VALUES (1,2,1,0,1,0,0);
+INSERT INTO `site_stats` VALUES (1,13,1,2,1,0,0);
 /*!40000 ALTER TABLE `site_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1417,7 +1416,7 @@ CREATE TABLE `slots` (
 
 LOCK TABLES `slots` WRITE;
 /*!40000 ALTER TABLE `slots` DISABLE KEYS */;
-INSERT INTO `slots` VALUES (1,1,1,1),(2,1,2,2),(3,1,3,3);
+INSERT INTO `slots` VALUES (1,1,1,1),(2,1,2,2),(3,1,3,3),(4,1,4,4),(5,1,5,5),(6,1,6,6),(7,1,7,7),(8,1,8,8),(9,1,9,9),(10,1,10,10),(11,1,11,11),(12,1,12,12),(13,1,13,13),(14,1,14,14);
 /*!40000 ALTER TABLE `slots` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1460,7 +1459,7 @@ CREATE TABLE `text` (
   `old_text` mediumblob NOT NULL,
   `old_flags` tinyblob NOT NULL,
   PRIMARY KEY (`old_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=binary MAX_ROWS=10000000 AVG_ROW_LENGTH=10240;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=binary MAX_ROWS=10000000 AVG_ROW_LENGTH=10240;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1469,7 +1468,7 @@ CREATE TABLE `text` (
 
 LOCK TABLES `text` WRITE;
 /*!40000 ALTER TABLE `text` DISABLE KEYS */;
-INSERT INTO `text` VALUES (1,'<strong>MediaWiki has been installed.</strong>\n\nConsult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n== Getting started ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8'),(2,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the [[WWR_\'21]]: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n</div>\n\n== Points of Interest ==\n\n<div class=\"main-page-columns\">\n\n; [[National Parks]]: Parks worth stopping at and how to best see them.\n\n</div>\n\n== Mediawiki Resources ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8'),(3,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: \n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Points of Interest ==\n\n<div class=\"main-page-columns\">\n\n; [[National Parks]]: Parks worth stopping at and how to best see them.\n\n</div>\n\n== Pre-route ==\n\n; [[Checklist]]: vacation message email/voicemail, water plants, pay bills, forward mail, etc...\n\n== Mediawiki Resources ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8');
+INSERT INTO `text` VALUES (1,'<strong>MediaWiki has been installed.</strong>\n\nConsult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n== Getting started ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8'),(2,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the [[WWR_\'21]]: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n</div>\n\n== Points of Interest ==\n\n<div class=\"main-page-columns\">\n\n; [[National Parks]]: Parks worth stopping at and how to best see them.\n\n</div>\n\n== Mediawiki Resources ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8'),(3,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: \n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Points of Interest ==\n\n<div class=\"main-page-columns\">\n\n; [[National Parks]]: Parks worth stopping at and how to best see them.\n\n</div>\n\n== Pre-route ==\n\n; [[Checklist]]: vacation message email/voicemail, water plants, pay bills, forward mail, etc...\n\n== Mediawiki Resources ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8'),(4,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n; [[Points of Interest]]: National Parks, historical landmarks, hot springs, swimming holes, scenic viewpoints, etc.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: \n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Pre-route ==\n\n; [[Checklist]]: vacation message email/voicemail, water plants, pay bills, forward mail, etc...\n\n== Mediawiki Resources ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8'),(5,'* [https://www.google.com/maps/place/Fifth+Water+Hot+Springs+Trail+Head/@40.0845424,-111.3549516,15z/data=!4m5!3m4!1s0x0:0xec927f0dd64c32a0!8m2!3d40.0845424!4d-111.3549516 Fifth Water Hot Springs]','utf-8'),(6,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n; [[Points of Interest]]: National Parks, historical landmarks, hot springs, swimming holes, scenic viewpoints, etc.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: \n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Pre-route ==\n\n; [[Training]]: Exercises, stretches, diet ideas for getting body ready.\n\n; [[Test runs]]: Overnighters near home with similar trail material/conditions if possible. \n \n; [[Pre-Travel Checklist]]: vacation message email/voicemail, water plants, pay bills, forward mail, etc...\n\n== Mediawiki Resources ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8'),(7,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n; [[Points of Interest]]: National Parks, historical landmarks, hot springs, swimming holes, scenic viewpoints, etc.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: \n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Pre-route ==\n\n; [[Training]]: Exercises, stretches, diet ideas for getting body ready.\n\n; [[Test runs]]: Overnighters near home with similar trail material/conditions if possible. \n \n; [[Pre-Travel Checklist]]: vacation message email/voicemail, water plants, pay bills, forward mail, etc...\n\n== General Resources ==\n* [https://bikepacking.com/plan/route-planning-guide/ Bikepacking.com Route Planning Guide]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]','utf-8'),(8,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n; [[Points of Interest]]: National Parks, historical landmarks, hot springs, swimming holes, scenic viewpoints, etc.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: Tent and general sleep system info.\n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Pre-route ==\n\n; [[Training]]: Exercises, stretches, diet ideas for getting body ready.\n\n; [[Test runs]]: Overnighters near home with similar trail material/conditions if possible. \n \n; [[Pre-Travel Checklist]]: vacation message email/voicemail, water plants, pay bills, forward mail, etc...\n\n== General Resources ==\n* [https://bikepacking.com/plan/route-planning-guide/ Bikepacking.com Route Planning Guide]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]','utf-8'),(9,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n; [[Points of Interest]]: National Parks, historical landmarks, hot springs, swimming holes, scenic viewpoints, etc.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: Tent and general sleep system info.\n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Pre-route ==\n\n; [[Training]]: Exercises, stretches, diet ideas for getting body ready.\n\n; [[Test runs]]: Overnighters near home with similar trail material/conditions if possible. \n \n; [[Pre-Travel Checklist]]: Vacation message Email/Voicemail, Water plants, Pay bills, Forward mail, etc...\n\n== General Resources ==\n* [https://bikepacking.com/plan/route-planning-guide/ Bikepacking.com Route Planning Guide]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]','utf-8'),(10,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the Mediawiki software used to power this site.\n\n\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n; [[Points of Interest]]: National Parks, historical landmarks, hot springs, swimming holes, scenic viewpoints, etc.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: Tent and general sleep system info.\n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Pre-route ==\n\n; [[Training]]: Exercises, stretches, diet ideas for getting body ready.\n\n; [[Test runs]]: Overnighters near home with similar trail material/conditions if possible. \n \n; [[Pre-Travel Checklist]]: Vacation message Email/Voicemail, Water plants, Pay bills, Forward mail, etc...\n\n== General Resources ==\n* [https://bikepacking.com/plan/route-planning-guide/ Bikepacking.com Route Planning Guide]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]','utf-8'),(11,'\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n; [[Points of Interest]]: National Parks, historical landmarks, hot springs, swimming holes, scenic viewpoints, etc.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: Tent and general sleep system info.\n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Pre-route ==\n\n; [[Training]]: Exercises, stretches, diet ideas for getting body ready.\n\n; [[Test runs]]: Overnighters near home with similar trail material/conditions if possible. \n \n; [[Pre-Travel Checklist]]: Vacation message Email/Voicemail, Water plants, Pay bills, Forward mail, etc...\n\n== General Resources ==\n* [https://bikepacking.com/plan/route-planning-guide/ Bikepacking.com Route Planning Guide]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the Mediawiki software used to power this site.','utf-8'),(12,'== Resources ==\n* [[https://andrewskurka.com/backpacking-trip-planning-checklist-to-do/ Backpack trip planning checklist]]','utf-8'),(13,'== Resources ==\n* [https://andrewskurka.com/backpacking-trip-planning-checklist-to-do/ Backpack trip planning checklist]','utf-8'),(14,'\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n; [[Points of Interest]]: National Parks, historical landmarks, hot springs, swimming holes, scenic viewpoints, etc.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: Tent and general sleep system info.\n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Pre-route ==\n\n; [[Training]]: Exercises, stretches, diet ideas for getting body ready.\n\n; [[Test runs]]: Overnighters near home with similar trail material/conditions if possible. \n \n; [[Pre-Travel Checklist]]: Vacation message Email/Voicemail, Water plants, Pay bills, Forward mail, etc...\n\n== General Resources ==\n* [https://bikepacking.com/plan/route-planning-guide/ Bikepacking.com Route Planning Guide]\n* [https://exploringwild.com/bikepacking-home/ Exploring Wild blog] - a comprehensive bikepacking adventure blog by Alissa, a seasoned adventurer.\n\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the Mediawiki software used to power this site.','utf-8');
 /*!40000 ALTER TABLE `text` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1574,7 +1573,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Admin','',':pbkdf2:sha512:30000:64:EJ6dL3NKhiSvansBlGXovw==:WP+H7nb1ESix35fIAB00VK18QyP4Zw63cjNgIITn/RpbAQrWp45EBurvm110RAClBLiW/VnM+NPKE2v1M2I3pw==','',NULL,'centerhauf@gmail.com','20210314214411','bb88c3cb0e3229087d16f4b8b43b6cb9',NULL,NULL,NULL,'20210314021616',2,NULL),(2,'MediaWiki default','','','',NULL,'','20210314021617','*** INVALID ***\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',NULL,NULL,NULL,'20210314021617',0,NULL);
+INSERT INTO `user` VALUES (1,'Admin','',':pbkdf2:sha512:30000:64:EJ6dL3NKhiSvansBlGXovw==:WP+H7nb1ESix35fIAB00VK18QyP4Zw63cjNgIITn/RpbAQrWp45EBurvm110RAClBLiW/VnM+NPKE2v1M2I3pw==','',NULL,'centerhauf@gmail.com','20210314214411','bb88c3cb0e3229087d16f4b8b43b6cb9',NULL,NULL,NULL,'20210314021616',13,NULL),(2,'MediaWiki default','','','',NULL,'','20210314021617','*** INVALID ***\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',NULL,NULL,NULL,'20210314021617',0,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1696,7 +1695,7 @@ CREATE TABLE `watchlist` (
   UNIQUE KEY `wl_user` (`wl_user`,`wl_namespace`,`wl_title`),
   KEY `namespace_title` (`wl_namespace`,`wl_title`),
   KEY `wl_user_notificationtimestamp` (`wl_user`,`wl_notificationtimestamp`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1705,7 +1704,7 @@ CREATE TABLE `watchlist` (
 
 LOCK TABLES `watchlist` WRITE;
 /*!40000 ALTER TABLE `watchlist` DISABLE KEYS */;
-INSERT INTO `watchlist` VALUES (1,1,0,'Main_Page',NULL),(2,1,1,'Main_Page',NULL);
+INSERT INTO `watchlist` VALUES (1,1,0,'Main_Page',NULL),(2,1,1,'Main_Page',NULL),(3,1,0,'Points_of_Interest',NULL),(4,1,1,'Points_of_Interest',NULL),(5,1,0,'Pre-Travel_Checklist',NULL),(6,1,1,'Pre-Travel_Checklist',NULL);
 /*!40000 ALTER TABLE `watchlist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1742,4 +1741,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-15  2:47:37
+-- Dump completed on 2021-03-15 16:09:28
