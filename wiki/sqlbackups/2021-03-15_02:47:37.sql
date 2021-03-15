@@ -265,7 +265,7 @@ CREATE TABLE `content` (
   `content_model` smallint(5) unsigned NOT NULL,
   `content_address` varbinary(255) NOT NULL,
   PRIMARY KEY (`content_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -274,7 +274,7 @@ CREATE TABLE `content` (
 
 LOCK TABLES `content` WRITE;
 /*!40000 ALTER TABLE `content` DISABLE KEYS */;
-INSERT INTO `content` VALUES (1,735,'a5wehuldd0go2uniagwvx66n6c80irq',1,'tt:1');
+INSERT INTO `content` VALUES (1,735,'a5wehuldd0go2uniagwvx66n6c80irq',1,'tt:1'),(2,1511,'fn40iudc4kef546yj7gmxg5ensjq4k5',1,'tt:2'),(3,2194,'g8w4ocv4cpghi5akk7s9gb00ogt0snh',1,'tt:3');
 /*!40000 ALTER TABLE `content` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -322,7 +322,7 @@ CREATE TABLE `externallinks` (
   KEY `el_index` (`el_index`(60)),
   KEY `el_index_60` (`el_index_60`,`el_id`),
   KEY `el_from_index_60` (`el_from`,`el_index_60`,`el_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -331,6 +331,7 @@ CREATE TABLE `externallinks` (
 
 LOCK TABLES `externallinks` WRITE;
 /*!40000 ALTER TABLE `externallinks` DISABLE KEYS */;
+INSERT INTO `externallinks` VALUES (1,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents','https://org.mediawiki.www./wiki/Special:MyLanguage/Help:Contents','https://org.mediawiki.www./wiki/Special:MyLanguage/Help:Cont'),(2,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:Configuration_settings','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:Co'),(3,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:FAQ','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:FA'),(4,1,'https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce','https://org.wikimedia.lists./mailman/listinfo/mediawiki-announce','https://org.wikimedia.lists./mailman/listinfo/mediawiki-anno'),(5,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources','https://org.mediawiki.www./wiki/Special:MyLanguage/Localisation#Translation_resources','https://org.mediawiki.www./wiki/Special:MyLanguage/Localisat'),(6,1,'https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:Combating_spam','https://org.mediawiki.www./wiki/Special:MyLanguage/Manual:Co');
 /*!40000 ALTER TABLE `externallinks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -621,7 +622,7 @@ CREATE TABLE `job` (
   KEY `job_cmd_token_id` (`job_cmd`,`job_token`,`job_id`),
   KEY `job_cmd` (`job_cmd`,`job_namespace`,`job_title`,`job_params`(128)),
   KEY `job_timestamp` (`job_timestamp`)
-) ENGINE=InnoDB DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -630,6 +631,7 @@ CREATE TABLE `job` (
 
 LOCK TABLES `job` WRITE;
 /*!40000 ALTER TABLE `job` DISABLE KEYS */;
+INSERT INTO `job` VALUES (6,'recentChangesUpdate',-1,'RecentChanges','20210314224244','a:4:{s:4:\"type\";s:11:\"cacheUpdate\";s:9:\"namespace\";i:-1;s:5:\"title\";s:13:\"RecentChanges\";s:9:\"requestId\";s:24:\"d37811c14ec240baf7d7d4fa\";}',77770903,0,'',NULL,'p42glrsl783wj55io7lxhmhxf0e5db5');
 /*!40000 ALTER TABLE `job` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -771,7 +773,7 @@ CREATE TABLE `module_deps` (
 
 LOCK TABLES `module_deps` WRITE;
 /*!40000 ALTER TABLE `module_deps` DISABLE KEYS */;
-INSERT INTO `module_deps` VALUES ('ext.visualEditor.desktopArticleTarget.noscript','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"skins/Timeless/resources/images/pencil-grey.png\",\"skins/Timeless/resources/images/pencil-grey.svg\",\"skins/Timeless/resources/images/pencil-source-grey.png\",\"skins/Timeless/resources/images/pencil-source-grey.svg\",\"skins/Timeless/resources/mixins.less\",\"skins/Timeless/resources/themes/wikimedia.less\",\"skins/Timeless/resources/variables.less\"]'),('mediawiki.htmlform.styles','timeless|en','[\"resources/src/mediawiki.htmlform.styles/images/question.png\",\"resources/src/mediawiki.htmlform.styles/images/question.svg\",\"resources/src/mediawiki.less/mediawiki.mixins.less\"]'),('mediawiki.skinning.content.externallinks','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.skinning/images/audio-ltr.png\",\"resources/src/mediawiki.skinning/images/audio-ltr.svg\",\"resources/src/mediawiki.skinning/images/chat-ltr.png\",\"resources/src/mediawiki.skinning/images/chat-ltr.svg\",\"resources/src/mediawiki.skinning/images/document-ltr.png\",\"resources/src/mediawiki.skinning/images/document-ltr.svg\",\"resources/src/mediawiki.skinning/images/external-ltr.png\",\"resources/src/mediawiki.skinning/images/external-ltr.svg\",\"resources/src/mediawiki.skinning/images/ftp-ltr.png\",\"resources/src/mediawiki.skinning/images/ftp-ltr.svg\",\"resources/src/mediawiki.skinning/images/mail.png\",\"resources/src/mediawiki.skinning/images/mail.svg\",\"resources/src/mediawiki.skinning/images/video.png\",\"resources/src/mediawiki.skinning/images/video.svg\"]'),('mediawiki.special.userlogin.common.styles','timeless|en','[\"resources/src/mediawiki.special.userlogin.common.styles/images/icon-lock.png\"]'),('mediawiki.special.userlogin.login.styles','timeless|en','[\"resources/src/mediawiki.special.userlogin.login.styles/images/glyph-people-large.png\"]'),('mediawiki.ui','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\",\"resources/src/mediawiki.ui/components/forms.less\",\"resources/src/mediawiki.ui/components/utilities.less\"]'),('mediawiki.ui.button','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/mixins.buttons.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\"]'),('mediawiki.ui.checkbox','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\",\"resources/src/mediawiki.ui/components/images/checkbox-checked.png\",\"resources/src/mediawiki.ui/components/images/checkbox-checked.svg\"]'),('mediawiki.ui.input','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\"]'),('mediawiki.ui.radio','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\"]'),('skins.timeless','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.skinning/i18n-all-lists-margins.less\",\"resources/src/mediawiki.skinning/i18n-headings.less\",\"resources/src/mediawiki.skinning/i18n-ordered-lists.less\",\"resources/src/mediawiki.skinning/images/ajax-loader.gif\",\"resources/src/mediawiki.skinning/images/spinner.gif\",\"skins/Timeless/resources/images/arrow-down-grey.png\",\"skins/Timeless/resources/images/arrow-down-grey.svg\",\"skins/Timeless/resources/images/brackets-grey.png\",\"skins/Timeless/resources/images/brackets-grey.svg\",\"skins/Timeless/resources/images/cat.svg\",\"skins/Timeless/resources/images/clock-grey.png\",\"skins/Timeless/resources/images/clock-grey.svg\",\"skins/Timeless/resources/images/eyeball-grey.png\",\"skins/Timeless/resources/images/eyeball-grey.svg\",\"skins/Timeless/resources/images/gear-grey.png\",\"skins/Timeless/resources/images/gear-grey.svg\",\"skins/Timeless/resources/images/gear-large-grey.png\",\"skins/Timeless/resources/images/gear-large-grey.svg\",\"skins/Timeless/resources/images/languages-grey.png\",\"skins/Timeless/resources/images/languages-grey.svg\",\"skins/Timeless/resources/images/magnify-ltr.png\",\"skins/Timeless/resources/images/magnify-ltr.svg\",\"skins/Timeless/resources/images/menu-large-grey.png\",\"skins/Timeless/resources/images/menu-large-grey.svg\",\"skins/Timeless/resources/images/page-grey.png\",\"skins/Timeless/resources/images/page-grey.svg\",\"skins/Timeless/resources/images/page-misc-grey.png\",\"skins/Timeless/resources/images/page-misc-grey.svg\",\"skins/Timeless/resources/images/pencil-grey.png\",\"skins/Timeless/resources/images/pencil-grey.svg\",\"skins/Timeless/resources/images/plus-grey.png\",\"skins/Timeless/resources/images/plus-grey.svg\",\"skins/Timeless/resources/images/puzzle-grey.png\",\"skins/Timeless/resources/images/puzzle-grey.svg\",\"skins/Timeless/resources/images/search-ltr.png\",\"skins/Timeless/resources/images/search-ltr.svg\",\"skins/Timeless/resources/images/star-filled.png\",\"skins/Timeless/resources/images/star-filled.svg\",\"skins/Timeless/resources/images/star.png\",\"skins/Timeless/resources/images/star.svg\",\"skins/Timeless/resources/images/talk-grey.png\",\"skins/Timeless/resources/images/talk-grey.svg\",\"skins/Timeless/resources/images/user-grey.png\",\"skins/Timeless/resources/images/user-grey.svg\",\"skins/Timeless/resources/images/user-large-grey.png\",\"skins/Timeless/resources/images/user-large-grey.svg\",\"skins/Timeless/resources/mixins.less\",\"skins/Timeless/resources/themes/wikimedia.less\",\"skins/Timeless/resources/variables.less\"]');
+INSERT INTO `module_deps` VALUES ('ext.visualEditor.desktopArticleTarget.noscript','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"skins/Timeless/resources/images/pencil-grey.png\",\"skins/Timeless/resources/images/pencil-grey.svg\",\"skins/Timeless/resources/images/pencil-source-grey.png\",\"skins/Timeless/resources/images/pencil-source-grey.svg\",\"skins/Timeless/resources/mixins.less\",\"skins/Timeless/resources/themes/wikimedia.less\",\"skins/Timeless/resources/variables.less\"]'),('ext.visualEditor.welcome','timeless|en','[\"extensions/VisualEditor/modules/ve-mw/ui/styles/dialogs/images/welcomeSplash-ltr.png\"]'),('ext.wikiEditor','timeless|en','[\"extensions/WikiEditor/modules/images/dialogs/insert-disambiguation.png\",\"extensions/WikiEditor/modules/images/dialogs/insert-link-exists.png\",\"extensions/WikiEditor/modules/images/dialogs/insert-link-external.png\",\"extensions/WikiEditor/modules/images/dialogs/insert-link-invalid.png\",\"extensions/WikiEditor/modules/images/dialogs/insert-link-notexists.png\",\"extensions/WikiEditor/modules/images/dialogs/loading-small.gif\",\"extensions/WikiEditor/modules/images/toolbar/arrow-down.svg\",\"extensions/WikiEditor/modules/images/toolbar/loading.gif\",\"resources/src/mediawiki.less/mediawiki.mixins.less\"]'),('jquery.ui','timeless|en','[\"resources/lib/jquery.ui/themes/smoothness/images/ui-bg_flat_0_aaaaaa_40x100.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-bg_flat_75_ffffff_40x100.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-bg_glass_55_fbf9ee_1x400.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-bg_glass_65_ffffff_1x400.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-bg_glass_75_dadada_1x400.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-bg_glass_75_e6e6e6_1x400.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-bg_glass_95_fef1ec_1x400.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-bg_highlight-soft_75_cccccc_1x100.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-icons_222222_256x240.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-icons_2e83ff_256x240.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-icons_454545_256x240.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-icons_888888_256x240.png\",\"resources/lib/jquery.ui/themes/smoothness/images/ui-icons_cd0a0a_256x240.png\"]'),('mediawiki.action.view.postEdit','timeless|en','[\"resources/src/mediawiki.action/images/close.png\",\"resources/src/mediawiki.action/images/close.svg\",\"resources/src/mediawiki.action/images/green-checkmark.png\",\"resources/src/mediawiki.less/mediawiki.mixins.less\"]'),('mediawiki.htmlform.styles','timeless|en','[\"resources/src/mediawiki.htmlform.styles/images/question.png\",\"resources/src/mediawiki.htmlform.styles/images/question.svg\",\"resources/src/mediawiki.less/mediawiki.mixins.less\"]'),('mediawiki.icon','timeless|en','[\"resources/src/mediawiki.icon/images/arrow-collapsed-ltr.png\",\"resources/src/mediawiki.icon/images/arrow-collapsed-ltr.svg\",\"resources/src/mediawiki.icon/images/arrow-expanded.png\",\"resources/src/mediawiki.icon/images/arrow-expanded.svg\",\"resources/src/mediawiki.less/mediawiki.mixins.less\"]'),('mediawiki.skinning.content.externallinks','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.skinning/images/audio-ltr.png\",\"resources/src/mediawiki.skinning/images/audio-ltr.svg\",\"resources/src/mediawiki.skinning/images/chat-ltr.png\",\"resources/src/mediawiki.skinning/images/chat-ltr.svg\",\"resources/src/mediawiki.skinning/images/document-ltr.png\",\"resources/src/mediawiki.skinning/images/document-ltr.svg\",\"resources/src/mediawiki.skinning/images/external-ltr.png\",\"resources/src/mediawiki.skinning/images/external-ltr.svg\",\"resources/src/mediawiki.skinning/images/ftp-ltr.png\",\"resources/src/mediawiki.skinning/images/ftp-ltr.svg\",\"resources/src/mediawiki.skinning/images/mail.png\",\"resources/src/mediawiki.skinning/images/mail.svg\",\"resources/src/mediawiki.skinning/images/video.png\",\"resources/src/mediawiki.skinning/images/video.svg\"]'),('mediawiki.special.userlogin.common.styles','timeless|en','[\"resources/src/mediawiki.special.userlogin.common.styles/images/icon-lock.png\"]'),('mediawiki.special.userlogin.login.styles','timeless|en','[\"resources/src/mediawiki.special.userlogin.login.styles/images/glyph-people-large.png\"]'),('mediawiki.ui','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\",\"resources/src/mediawiki.ui/components/forms.less\",\"resources/src/mediawiki.ui/components/utilities.less\"]'),('mediawiki.ui.button','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/mixins.buttons.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\"]'),('mediawiki.ui.checkbox','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\",\"resources/src/mediawiki.ui/components/images/checkbox-checked.png\",\"resources/src/mediawiki.ui/components/images/checkbox-checked.svg\"]'),('mediawiki.ui.input','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\"]'),('mediawiki.ui.radio','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.less/mediawiki.ui/variables.less\"]'),('oojs-ui-core.styles','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"skins/Timeless/resources/mixins.less\",\"skins/Timeless/resources/themes/wikimedia.less\",\"skins/Timeless/resources/variables.less\"]'),('oojs-ui-widgets','timeless|en','[\"resources/lib/ooui/images/grab.cur\",\"resources/lib/ooui/images/grabbing.cur\"]'),('skins.timeless','timeless|en','[\"resources/src/mediawiki.less/mediawiki.mixins.less\",\"resources/src/mediawiki.skinning/i18n-all-lists-margins.less\",\"resources/src/mediawiki.skinning/i18n-headings.less\",\"resources/src/mediawiki.skinning/i18n-ordered-lists.less\",\"resources/src/mediawiki.skinning/images/ajax-loader.gif\",\"resources/src/mediawiki.skinning/images/spinner.gif\",\"skins/Timeless/resources/images/arrow-down-grey.png\",\"skins/Timeless/resources/images/arrow-down-grey.svg\",\"skins/Timeless/resources/images/brackets-grey.png\",\"skins/Timeless/resources/images/brackets-grey.svg\",\"skins/Timeless/resources/images/cat.svg\",\"skins/Timeless/resources/images/clock-grey.png\",\"skins/Timeless/resources/images/clock-grey.svg\",\"skins/Timeless/resources/images/eyeball-grey.png\",\"skins/Timeless/resources/images/eyeball-grey.svg\",\"skins/Timeless/resources/images/gear-grey.png\",\"skins/Timeless/resources/images/gear-grey.svg\",\"skins/Timeless/resources/images/gear-large-grey.png\",\"skins/Timeless/resources/images/gear-large-grey.svg\",\"skins/Timeless/resources/images/languages-grey.png\",\"skins/Timeless/resources/images/languages-grey.svg\",\"skins/Timeless/resources/images/magnify-ltr.png\",\"skins/Timeless/resources/images/magnify-ltr.svg\",\"skins/Timeless/resources/images/menu-large-grey.png\",\"skins/Timeless/resources/images/menu-large-grey.svg\",\"skins/Timeless/resources/images/page-grey.png\",\"skins/Timeless/resources/images/page-grey.svg\",\"skins/Timeless/resources/images/page-misc-grey.png\",\"skins/Timeless/resources/images/page-misc-grey.svg\",\"skins/Timeless/resources/images/pencil-grey.png\",\"skins/Timeless/resources/images/pencil-grey.svg\",\"skins/Timeless/resources/images/plus-grey.png\",\"skins/Timeless/resources/images/plus-grey.svg\",\"skins/Timeless/resources/images/puzzle-grey.png\",\"skins/Timeless/resources/images/puzzle-grey.svg\",\"skins/Timeless/resources/images/search-ltr.png\",\"skins/Timeless/resources/images/search-ltr.svg\",\"skins/Timeless/resources/images/star-filled.png\",\"skins/Timeless/resources/images/star-filled.svg\",\"skins/Timeless/resources/images/star.png\",\"skins/Timeless/resources/images/star.svg\",\"skins/Timeless/resources/images/talk-grey.png\",\"skins/Timeless/resources/images/talk-grey.svg\",\"skins/Timeless/resources/images/user-grey.png\",\"skins/Timeless/resources/images/user-grey.svg\",\"skins/Timeless/resources/images/user-large-grey.png\",\"skins/Timeless/resources/images/user-large-grey.svg\",\"skins/Timeless/resources/mixins.less\",\"skins/Timeless/resources/themes/wikimedia.less\",\"skins/Timeless/resources/variables.less\"]');
 /*!40000 ALTER TABLE `module_deps` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -874,7 +876,7 @@ CREATE TABLE `page` (
 
 LOCK TABLES `page` WRITE;
 /*!40000 ALTER TABLE `page` DISABLE KEYS */;
-INSERT INTO `page` VALUES (1,0,'Main_Page','',0,1,0.725452216924,'20210314021617',NULL,1,735,'wikitext',NULL);
+INSERT INTO `page` VALUES (1,0,'Main_Page','',0,0,0.725452216924,'20210314224244','20210314224244',3,2194,'wikitext',NULL);
 /*!40000 ALTER TABLE `page` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -961,6 +963,7 @@ CREATE TABLE `pagelinks` (
 
 LOCK TABLES `pagelinks` WRITE;
 /*!40000 ALTER TABLE `pagelinks` DISABLE KEYS */;
+INSERT INTO `pagelinks` VALUES (1,0,0,'Bike_setup'),(1,0,0,'Camping_Setup'),(1,0,0,'Checklist'),(1,0,0,'Clothes'),(1,0,0,'Food_and_Water'),(1,0,0,'Food_prep'),(1,0,0,'General'),(1,0,0,'National_Parks'),(1,0,0,'Navigation'),(1,0,0,'Permits_and_Registrations'),(1,0,0,'Recharge_Electronics'),(1,0,0,'Route_1'),(1,0,0,'Route_2'),(1,0,0,'Sleep'),(1,0,0,'Table_of_contents'),(1,0,0,'Weather');
 /*!40000 ALTER TABLE `pagelinks` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1038,6 +1041,7 @@ CREATE TABLE `querycache_info` (
 
 LOCK TABLES `querycache_info` WRITE;
 /*!40000 ALTER TABLE `querycache_info` DISABLE KEYS */;
+INSERT INTO `querycache_info` VALUES ('activeusers','20210314215812');
 /*!40000 ALTER TABLE `querycache_info` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1067,6 +1071,7 @@ CREATE TABLE `querycachetwo` (
 
 LOCK TABLES `querycachetwo` WRITE;
 /*!40000 ALTER TABLE `querycachetwo` DISABLE KEYS */;
+INSERT INTO `querycachetwo` VALUES ('activeusers',1615759092,2,'Admin',0,'');
 /*!40000 ALTER TABLE `querycachetwo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1111,7 +1116,7 @@ CREATE TABLE `recentchanges` (
   KEY `rc_actor` (`rc_actor`,`rc_timestamp`),
   KEY `rc_name_type_patrolled_timestamp` (`rc_namespace`,`rc_type`,`rc_patrolled`,`rc_timestamp`),
   KEY `rc_this_oldid` (`rc_this_oldid`)
-) ENGINE=InnoDB DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1120,6 +1125,7 @@ CREATE TABLE `recentchanges` (
 
 LOCK TABLES `recentchanges` WRITE;
 /*!40000 ALTER TABLE `recentchanges` DISABLE KEYS */;
+INSERT INTO `recentchanges` VALUES (1,'20210314215812',1,0,'Main_Page',1,0,0,0,1,2,1,0,'mw.edit',2,'172.27.0.1',735,1511,0,0,NULL,'',''),(2,'20210314224244',1,0,'Main_Page',1,0,0,0,1,3,2,0,'mw.edit',2,'172.27.0.1',1511,2194,0,0,NULL,'','');
 /*!40000 ALTER TABLE `recentchanges` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1174,7 +1180,7 @@ CREATE TABLE `revision` (
   KEY `page_timestamp` (`rev_page`,`rev_timestamp`),
   KEY `rev_actor_timestamp` (`rev_actor`,`rev_timestamp`,`rev_id`),
   KEY `rev_page_actor_timestamp` (`rev_page`,`rev_actor`,`rev_timestamp`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=binary MAX_ROWS=10000000 AVG_ROW_LENGTH=1024;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=binary MAX_ROWS=10000000 AVG_ROW_LENGTH=1024;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1183,7 +1189,7 @@ CREATE TABLE `revision` (
 
 LOCK TABLES `revision` WRITE;
 /*!40000 ALTER TABLE `revision` DISABLE KEYS */;
-INSERT INTO `revision` VALUES (1,1,0,0,'20210314021617',0,0,735,0,'a5wehuldd0go2uniagwvx66n6c80irq');
+INSERT INTO `revision` VALUES (1,1,0,0,'20210314021617',0,0,735,0,'a5wehuldd0go2uniagwvx66n6c80irq'),(2,1,0,0,'20210314215812',0,0,1511,1,'fn40iudc4kef546yj7gmxg5ensjq4k5'),(3,1,0,0,'20210314224244',0,0,2194,2,'g8w4ocv4cpghi5akk7s9gb00ogt0snh');
 /*!40000 ALTER TABLE `revision` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1212,7 +1218,7 @@ CREATE TABLE `revision_actor_temp` (
 
 LOCK TABLES `revision_actor_temp` WRITE;
 /*!40000 ALTER TABLE `revision_actor_temp` DISABLE KEYS */;
-INSERT INTO `revision_actor_temp` VALUES (1,2,'20210314021617',1);
+INSERT INTO `revision_actor_temp` VALUES (2,1,'20210314215812',1),(3,1,'20210314224244',1),(1,2,'20210314021617',1);
 /*!40000 ALTER TABLE `revision_actor_temp` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1237,7 +1243,7 @@ CREATE TABLE `revision_comment_temp` (
 
 LOCK TABLES `revision_comment_temp` WRITE;
 /*!40000 ALTER TABLE `revision_comment_temp` DISABLE KEYS */;
-INSERT INTO `revision_comment_temp` VALUES (1,1);
+INSERT INTO `revision_comment_temp` VALUES (1,1),(2,1),(3,1);
 /*!40000 ALTER TABLE `revision_comment_temp` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1264,6 +1270,7 @@ CREATE TABLE `searchindex` (
 
 LOCK TABLES `searchindex` WRITE;
 /*!40000 ALTER TABLE `searchindex` DISABLE KEYS */;
+INSERT INTO `searchindex` VALUES (1,'main page',' consult theu800 user user\'su800 guide foru800 information onu800 using theu800 wiki software.  welcome tou800 theu800 wwru800 \'21u800 au800 site foru800 planning andu800 documenting au800 bikepacking trip viau800 theu800 western wildlands route inu800 2021.  visit theu800 table ofu800 contents foru800 au800 listing ofu800 categories. route information route information route information maps itinerary andu800 alternate routes. ; route 1u800 primary route option from flagstaff azu800 - slcu800 utu800. ; route 2u800 secondary route option loop starting atu800 slcu800 utu800 looping bears ears then back tou800 slcu800 utu800. logistics logistics logistics ; navigation primary andu800 secondary means ofu800 navigation. ; food andu800 water points foru800 resupply ofu800 food andu800 water. ; sleep campsites andu800 emergency rest stops. ; recharge electronics places andu800 methods ofu800 recharging. ; permits andu800 registrations trail camping permits notify local rangers ofu800 route travel insurance etcu800. ; weather possible weather andu800 trail conditions. gear gear gear ; bike setup specs foru800 route current andu800 planned tools spares. ; clothes clothes foru800 allu800 expected conditions. ; camping setup ; food prep stove fuel utensils cookware recipes. ; general first aidu800 bear spray repair kits. points ofu800 interest points ofu800 interest points ofu800 interest ; national parks parks worth stopping atu800 andu800 howu800 tou800 best seeu800 them. preu800-route preu800-route preu800-route ; checklist vacation message email voicemail water plants payu800 bills forward mail etcu800... mediawiki resources mediawiki resources mediawiki resources * configuration settings list * mediawiki faqu800 * mediawiki release mailing list * localise mediawiki foru800 your language * learn howu800 tou800 combat spam onu800 your wiki ');
 /*!40000 ALTER TABLE `searchindex` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1318,7 +1325,7 @@ CREATE TABLE `site_stats` (
 
 LOCK TABLES `site_stats` WRITE;
 /*!40000 ALTER TABLE `site_stats` DISABLE KEYS */;
-INSERT INTO `site_stats` VALUES (1,0,0,0,1,0,0);
+INSERT INTO `site_stats` VALUES (1,2,1,0,1,0,0);
 /*!40000 ALTER TABLE `site_stats` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1410,7 +1417,7 @@ CREATE TABLE `slots` (
 
 LOCK TABLES `slots` WRITE;
 /*!40000 ALTER TABLE `slots` DISABLE KEYS */;
-INSERT INTO `slots` VALUES (1,1,1,1);
+INSERT INTO `slots` VALUES (1,1,1,1),(2,1,2,2),(3,1,3,3);
 /*!40000 ALTER TABLE `slots` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1453,7 +1460,7 @@ CREATE TABLE `text` (
   `old_text` mediumblob NOT NULL,
   `old_flags` tinyblob NOT NULL,
   PRIMARY KEY (`old_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=binary MAX_ROWS=10000000 AVG_ROW_LENGTH=10240;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=binary MAX_ROWS=10000000 AVG_ROW_LENGTH=10240;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1462,7 +1469,7 @@ CREATE TABLE `text` (
 
 LOCK TABLES `text` WRITE;
 /*!40000 ALTER TABLE `text` DISABLE KEYS */;
-INSERT INTO `text` VALUES (1,'<strong>MediaWiki has been installed.</strong>\n\nConsult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n== Getting started ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8');
+INSERT INTO `text` VALUES (1,'<strong>MediaWiki has been installed.</strong>\n\nConsult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n== Getting started ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8'),(2,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the [[WWR_\'21]]: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n</div>\n\n== Points of Interest ==\n\n<div class=\"main-page-columns\">\n\n; [[National Parks]]: Parks worth stopping at and how to best see them.\n\n</div>\n\n== Mediawiki Resources ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8'),(3,'Consult the [https://www.mediawiki.org/wiki/Special:MyLanguage/Help:Contents User\'s Guide] for information on using the wiki software.\n\n\'\'\'Welcome to the WWR \'21: a site for planning and documenting a bikepacking trip via the Western Wildlands Route in 2021.\'\'\'\n\nVisit the [[Table of contents]] for a listing of categories.\n\n== Route Information ==\n\nMaps, itinerary, and alternate routes.\n \n<div class=\"main-page-columns\">\n\n; [[Route 1]]: Primary route option from Flagstaff, AZ -> SLC, UT.\n\n; [[Route 2]]: Secondary route option loop starting at SLC, UT, looping Bears Ears, then back to SLC, UT.\n\n</div>\n\n== Logistics ==\n\n<div class=\"main-page-columns\">\n\n; [[Navigation]]: Primary and secondary means of navigation. \n\n; [[Food and Water]]: Points for resupply of food and water.\n\n; [[Sleep]]: Campsites and emergency rest stops.\n\n; [[Recharge Electronics]]: Places and methods of recharging.\n\n; [[Permits and Registrations]]: Trail/camping permits, notify local rangers of route, travel insurance, etc.\n\n; [[Weather]]: Possible weather and trail conditions.\n\n</div>\n\n== Gear ==\n\n<div class=\"main-page-columns\">\n\n; [[Bike setup]]: Specs for route (current and planned), tools, spares. \n\n; [[Clothes]]: clothes for all expected conditions.\n\n; [[Camping Setup]]: \n\n; [[Food prep]]: Stove, fuel, utensils, cookware, recipes.\n\n; [[General]]: first aid, bear spray, repair kits.\n\n</div>\n\n== Points of Interest ==\n\n<div class=\"main-page-columns\">\n\n; [[National Parks]]: Parks worth stopping at and how to best see them.\n\n</div>\n\n== Pre-route ==\n\n; [[Checklist]]: vacation message email/voicemail, water plants, pay bills, forward mail, etc...\n\n== Mediawiki Resources ==\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Configuration_settings Configuration settings list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:FAQ MediaWiki FAQ]\n* [https://lists.wikimedia.org/mailman/listinfo/mediawiki-announce MediaWiki release mailing list]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Localisation#Translation_resources Localise MediaWiki for your language]\n* [https://www.mediawiki.org/wiki/Special:MyLanguage/Manual:Combating_spam Learn how to combat spam on your wiki]','utf-8');
 /*!40000 ALTER TABLE `text` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1567,7 +1574,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Admin','',':pbkdf2:sha512:30000:64:EJ6dL3NKhiSvansBlGXovw==:WP+H7nb1ESix35fIAB00VK18QyP4Zw63cjNgIITn/RpbAQrWp45EBurvm110RAClBLiW/VnM+NPKE2v1M2I3pw==','',NULL,'centerhauf@gmail.com','20210314021617','bb88c3cb0e3229087d16f4b8b43b6cb9',NULL,NULL,NULL,'20210314021616',0,NULL),(2,'MediaWiki default','','','',NULL,'','20210314021617','*** INVALID ***\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',NULL,NULL,NULL,'20210314021617',0,NULL);
+INSERT INTO `user` VALUES (1,'Admin','',':pbkdf2:sha512:30000:64:EJ6dL3NKhiSvansBlGXovw==:WP+H7nb1ESix35fIAB00VK18QyP4Zw63cjNgIITn/RpbAQrWp45EBurvm110RAClBLiW/VnM+NPKE2v1M2I3pw==','',NULL,'centerhauf@gmail.com','20210314214411','bb88c3cb0e3229087d16f4b8b43b6cb9',NULL,NULL,NULL,'20210314021616',2,NULL),(2,'MediaWiki default','','','',NULL,'','20210314021617','*** INVALID ***\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0',NULL,NULL,NULL,'20210314021617',0,NULL);
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1668,6 +1675,7 @@ CREATE TABLE `user_properties` (
 
 LOCK TABLES `user_properties` WRITE;
 /*!40000 ALTER TABLE `user_properties` DISABLE KEYS */;
+INSERT INTO `user_properties` VALUES (1,'visualeditor-hidebetawelcome','1');
 /*!40000 ALTER TABLE `user_properties` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1688,7 +1696,7 @@ CREATE TABLE `watchlist` (
   UNIQUE KEY `wl_user` (`wl_user`,`wl_namespace`,`wl_title`),
   KEY `namespace_title` (`wl_namespace`,`wl_title`),
   KEY `wl_user_notificationtimestamp` (`wl_user`,`wl_notificationtimestamp`)
-) ENGINE=InnoDB DEFAULT CHARSET=binary;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=binary;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1697,6 +1705,7 @@ CREATE TABLE `watchlist` (
 
 LOCK TABLES `watchlist` WRITE;
 /*!40000 ALTER TABLE `watchlist` DISABLE KEYS */;
+INSERT INTO `watchlist` VALUES (1,1,0,'Main_Page',NULL),(2,1,1,'Main_Page',NULL);
 /*!40000 ALTER TABLE `watchlist` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1733,4 +1742,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-03-14 17:35:19
+-- Dump completed on 2021-03-15  2:47:37
