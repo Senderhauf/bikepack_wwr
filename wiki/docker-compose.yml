@@ -5,6 +5,8 @@ services:
     container_name: mediawiki
     build: .
     restart: always
+    env_file:
+      - db.env
     depends_on:
       - wiki_db
     ports:
@@ -12,22 +14,20 @@ services:
     links:
       - wiki_db 
     volumes:
-      - /var/www/html/images
+      - /var/www/wwr21/images
       # After initial setup, download LocalSettings.php to the same directory as
       # this yaml and uncomment the following line and use compose to restart the mediawiki service
-      - ./LocalSettings.php:/var/www/html/LocalSettings.php
-      - ./media:/var/www/html/media
-      - ./uploads:/var/www/html/uploads
+      - ./LocalSettings.php:/var/www/wwr21/LocalSettings.php
+      - ./media:/var/www/wwr21/media
+      - ./uploads:/var/www/wwr21/uploads
+      - ./apache2:/etc/apache2
       
   wiki_db:
     container_name: wiki_db
     image: mariadb
     restart: always
-    environment:
-      - MYSQL_DATABASE=wiki_sql_db
-      - MYSQL_USER=wiki_user
-      - MYSQL_PASSWORD=w1k1p455w0rd
-      - MYSQL_RANDOM_ROOT_PASSWORD='yes' 
+    env_file:
+      - db.env
     volumes:
       - db-data:/var/lib/mysql
 

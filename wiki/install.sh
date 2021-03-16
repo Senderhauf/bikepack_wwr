@@ -12,7 +12,7 @@ if test -f "$FILE"; then
 	docker cp $FILE wiki:/$FILE;
 
 	# run bash command in container to restore database from automysqlbackup
-	docker exec wiki /bin/bash gunzip < $FILE | mysql -u wiki_user -p w1k1p455w0rd;
+	docker exec wiki /bin/bash gunzip < $FILE | mysql -u $MYSQL_USER -p $MYSQL_PASSWORD;
 fi;
 ##########################################
 
