@@ -56,10 +56,13 @@ $wgEmailAuthentication = true;
 
 ## Database settings
 $wgDBtype = "mysql";
-$wgDBserver = "wiki_db";
+$wgDBserver = "wwr21_wiki_db";
 $wgDBname = getenv('MYSQL_DATABASE');
+error_log("wgDBname: {$wgDBname}");
 $wgDBuser = getenv('MYSQL_USER');
+error_log("wgDBuser: {$wgDBuser}");
 $wgDBpassword = getenv('MYSQL_PASSWORD');
+error_log("wgDBpassword: {$wgDBpassword}");
 
 # MySQL specific settings
 $wgDBprefix = "";
@@ -200,6 +203,6 @@ $wgFileExtensions = array_merge(
 );
 $wgJSBreadCrumbsHorizontalSeparator=" > ";
 $wgJSBreadCrumbsCSSSelectorHorizontal=["timeless" => "#content"];
-$wgDebugLogFile = "/var/log/mediawiki-debug-{$wgDBname}.log";
+$wgDebugLogFile = "/var/log/mediawiki/debug-{$wgDBname}.log";
 
 
