@@ -9,10 +9,11 @@ services:
       - db.env
     depends_on:
       - wwr21_wiki_db
-    ports:
-      - 8080:80
-    links:
-      - wwr21_wiki_db 
+    # ports:
+    #   - 8080:80
+    networks:
+      - traefik_proxy_web_net
+      - db_net 
     volumes:
       - /var/www/wwr21/images
       # After initial setup, download LocalSettings.php to the same directory as
@@ -20,25 +21,40 @@ services:
       - ./LocalSettings.php:/var/www/wwr21/LocalSettings.php
       - ./media:/var/www/wwr21/media
       - ./uploads:/var/www/wwr21/uploads
-      
+    labels:
+      #### Labels define the behavior and rules of the traefik proxy for this container ####
+      - "traefik.enable=true" # <== Enable traefik to proxy this container
+      - "traefik.http.routers.wwr21-wiki-web.rule=Host(`enigmaticmustardsensations.cool/wwr21`)" # <== Your Domain Name goes here for the http rule
+      - "traefik.http.routers.wwr21-wiki-web.entrypoints=web" # <== Defining the entrypoint for http, **ref: line 30
+      - "traefik.http.routers.wwr21-wiki-web.middlewares=redirect@file" # <== This is a middleware to redirect to https
+      - "traefik.http.routers.wwr21-wiki-secured.rule=Host(`enigmaticmustardsensations.cool/wwr21`)" # <== Your Domain Name for the https rule 
+      - "traefik.http.routers.wwr21-wiki-secured.entrypoints=web-secured" # <== Defining entrypoint for https, **ref: line 31
+      - "traefik.http.routers.wwr21-wiki-secured.tls.certresolver=mytlschallenge" # <== Defining certsresolvers for https     
   wwr21_wiki_db:
     container_name: wwr21_wiki_db
     image: mariadb
     restart: always
     env_file:
       - db.env
+    networks:
+      - db_net
     volumes:
-      - db-data:/var/lib/mysql
+      - wwr21_db_vol:/var/lib/mysql
 
-  adminer:
-    image: adminer
-    restart: always
-    depends_on:
-      - wwr21_wiki_db
-    ports:
-      - 8000:8080
-    links:
-      - wwr21_wiki_db
+  # adminer:
+  #   image: adminer
+  #   restart: always
+  #   depends_on:
+  #     - wwr21_wiki_db
+  #   ports:
+  #     - 8000:8080
+  #   networks:
+  #     - db_net
+
+networks:
+  traefik_proxy_web_net:
+    external: true
+  db_net:
 
 volumes:
   wwr21_db_vol:
