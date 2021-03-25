@@ -1,2 +1,3 @@
 maps/gps_data/*.tif
 videos/route_1/route_1_qgis_jpgs
+**/*.env

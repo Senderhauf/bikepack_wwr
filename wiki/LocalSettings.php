@@ -33,7 +33,7 @@ $wgMetaNamespace = "Western_Wildlands_'21";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "http://localhost:8080";
+$wgServer = "http://www.enigmaticmustardsensations.cool/wwr21";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
