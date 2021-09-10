@@ -33,7 +33,7 @@ $wgMetaNamespace = "Western_Wildlands_'21";
 $wgScriptPath = "";
 
 ## The protocol and server name to use in fully-qualified URLs
-$wgServer = "https://www.enigmaticmustardsensations.cool/wwr21";
+$wgServer = "https://wwr21.enigmaticmustardsensations.cool";
 
 ## The URL path to static resources (images, scripts, etc.)
 $wgResourceBasePath = $wgScriptPath;
@@ -137,13 +137,14 @@ $wgGroupPermissions['*']['edit'] = false;
 
 ## Default skin: you can change the default skin. Use the internal symbolic
 ## names, ie 'vector', 'monobook':
-$wgDefaultSkin = "timeless";
+$wgDefaultSkin = "foreground";
 
 # Enabled skins.
 # The following skins were automatically enabled:
-wfLoadSkin( 'MonoBook' );
-wfLoadSkin( 'Timeless' );
-wfLoadSkin( 'Vector' );
+#wfLoadSkin( 'MonoBook' );
+#wfLoadSkin( 'Timeless' );
+#wfLoadSkin( 'Vector' );
+wfLoadSkin( 'foreground' );
 
 
 # End of automatically generated settings.
@@ -186,7 +187,6 @@ wfLoadExtension( 'TitleBlacklist' );
 wfLoadExtension( 'VisualEditor' );
 wfLoadExtension( 'WikiEditor' );
 
-
 # End of automatically generated settings.
 # Add more configuration options below.
 $wgShowExceptionDetails = true;
@@ -205,4 +205,17 @@ $wgJSBreadCrumbsHorizontalSeparator=" > ";
 $wgJSBreadCrumbsCSSSelectorHorizontal=["timeless" => "#content"];
 $wgDebugLogFile = "/var/log/mediawiki/debug-{$wgDBname}.log";
 
-
+$wgForegroundFeatures = array(      
+  'showActionsForAnon' => false,
+  'NavWrapperType' => 'divonly',
+  'showHelpUnderTools' => true,
+  'showRecentChangesUnderTools' => true,
+  'enableTabs' => true,
+  'wikiName' => &$GLOBALS['wgSitename'],
+  'navbarIcon' => false,
+  'IeEdgeCode' => 1,
+  'showFooterIcons' => false,
+  'addThisPUBID' => '',
+  'useAddThisShare' => '',
+  'useAddThisFollow' => ''
+);

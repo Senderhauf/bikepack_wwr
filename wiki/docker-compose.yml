@@ -1,6 +1,46 @@
-version: '3'
+version: "3.3"
 
 services:
+  traefik:
+    image: traefik:v2.0
+    restart: always
+    container_name: traefik
+    ports:
+      - "80:80" # <== http
+      - "8080:8080" # <== :8080 is where the dashboard runs on
+      - "443:443" # <== https
+    command:
+    #### These are the CLI commands that will configure Traefik and tell it how to work! ####
+      ## API Settings - https://docs.traefik.io/operations/api/, endpoints - https://docs.traefik.io/operations/api/#endpoints ##
+      - --api.insecure=false # <== NOT RECOMMENDED FOR PRODUCTION
+      - --api.dashboard=true # <== Enabling the dashboard to view services, middlewares, routers, etc...
+      - --api.debug=true # <== Enabling additional endpoints for debugging and profiling
+      ## Log Settings (options: ERROR, DEBUG, PANIC, FATAL, WARN, INFO) - https://docs.traefik.io/observability/logs/ ##
+      - --log.level=DEBUG # <== Setting the level of the logs from traefik
+      ## Provider Settings - https://docs.traefik.io/providers/docker/#provider-configuration ##
+      - --providers.docker=true # <== Enabling docker as the provider for traefik
+      - --providers.docker.exposedbydefault=false # <== Don't expose every container to traefik, only expose enabled ones
+      - --providers.file.filename=/dynamic.yml # <== Referring to a dynamic configuration file
+      #- --providers.docker.network=web # <== Operate on the docker network named web
+      ## Entrypoints Settings - https://docs.traefik.io/routing/entrypoints/#configuration ##
+      - --entrypoints.web.address=:80 # <== Defining an entrypoint for port :80 named web
+      - --entrypoints.web-secured.address=:443 # <== Defining an entrypoint for https on port :443 named web-secured
+      ## Certificate Settings (Let's Encrypt) -  https://docs.traefik.io/https/acme/#configuration-examples ##
+      - --certificatesresolvers.mytlschallenge.acme.tlschallenge=true # <== Enable TLS-ALPN-01 to generate and renew ACME certs
+      - --certificatesresolvers.mytlschallenge.acme.email=centerhauf@gmail.com # <== Setting email for certs
+      - --certificatesresolvers.mytlschallenge.acme.storage=/letsencrypt/acme.json # <== Defining acme file to store cert information
+    volumes:
+      - ./letsencrypt:/letsencrypt # <== Volume for certs (TLS)
+      - /var/run/docker.sock:/var/run/docker.sock # <== Volume for docker admin
+      - ./dynamic.yml:/dynamic.yml # <== Volume for dynamic conf file, **ref: line 27
+    #networks:
+    # - web # <== Placing traefik on the network named web, to access containers on this network
+    labels:
+    #### Labels define the behavior and rules of the traefik proxy for this container ####
+      - "traefik.enable=true" # <== Enable traefik on itself to view dashboard and assign subdomain to view it
+      - "traefik.http.routers.api.rule=Host(`monitor.enigmaticmustardsensations.cool`)" # <== Setting the domain for the dashboard
+      - "traefik.http.routers.api.service=api@internal" # <== Enabling the api to be a service to access
+
   wwr21_mediawiki:
     container_name: wwr21_mediawiki
     build: .
@@ -11,50 +51,40 @@ services:
       - wwr21_wiki_db
     # ports:
     #   - 8080:80
-    networks:
-      - traefik_proxy_web_net
-      - db_net 
+    #networks:
+    # - web
+    # - db
     volumes:
-      - /var/www/wwr21/images
+      - /var/www/html/images
       # After initial setup, download LocalSettings.php to the same directory as
       # this yaml and uncomment the following line and use compose to restart the mediawiki service
-      - ./LocalSettings.php:/var/www/wwr21/LocalSettings.php
-      - ./media:/var/www/wwr21/media
-      - ./uploads:/var/www/wwr21/uploads
+      - ./LocalSettings.php:/var/www/html/LocalSettings.php
+      - ./media:/var/www/html/media
+      - ./uploads:/var/www/html/uploads
+      - ./apache2:/etc/apache2
     labels:
       #### Labels define the behavior and rules of the traefik proxy for this container ####
       - "traefik.enable=true" # <== Enable traefik to proxy this container
-      - "traefik.http.routers.wwr21-wiki-web.rule=Host(`enigmaticmustardsensations.cool/wwr21`)" # <== Your Domain Name goes here for the http rule
+      - "traefik.http.routers.wwr21-wiki-web.rule=Host(`wwr21.enigmaticmustardsensations.cool`)" # <== Your Domain Name goes here for the http rule
       - "traefik.http.routers.wwr21-wiki-web.entrypoints=web" # <== Defining the entrypoint for http, **ref: line 30
-      - "traefik.http.routers.wwr21-wiki-web.middlewares=redirect@file" # <== This is a middleware to redirect to https
-      - "traefik.http.routers.wwr21-wiki-secured.rule=Host(`enigmaticmustardsensations.cool/wwr21`)" # <== Your Domain Name for the https rule 
+        #- "traefik.http.routers.wwr21-wiki-web.middlewares=redirect@file,strip-wwr21@file"
+      - "traefik.http.routers.wwr21-wiki-secured.rule=Host(`wwr21.enigmaticmustardsensations.cool`)" # <== Your Domain Name for the https rule 
       - "traefik.http.routers.wwr21-wiki-secured.entrypoints=web-secured" # <== Defining entrypoint for https, **ref: line 31
       - "traefik.http.routers.wwr21-wiki-secured.tls.certresolver=mytlschallenge" # <== Defining certsresolvers for https     
+
   wwr21_wiki_db:
     container_name: wwr21_wiki_db
     image: mariadb
     restart: always
     env_file:
       - db.env
-    networks:
-      - db_net
+    #networks:
+    # - db
     volumes:
       - wwr21_db_vol:/var/lib/mysql
 
-  # adminer:
-  #   image: adminer
-  #   restart: always
-  #   depends_on:
-  #     - wwr21_wiki_db
-  #   ports:
-  #     - 8000:8080
-  #   networks:
-  #     - db_net
-
-networks:
-  traefik_proxy_web_net:
-    external: true
-  db_net:
-
+#networks:
+# web:
+# db:
 volumes:
   wwr21_db_vol:

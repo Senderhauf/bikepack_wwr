@@ -1,0 +1,12 @@
+## Setting up the middleware for redirect to https ##
+http:
+  middlewares:
+    redirect:
+      redirectScheme:
+        scheme: https
+
+        #strip-wwr21:
+        # stripPrefix:
+        #prefixes:
+        #  - "/wwr21"
+        #forceSlash: false
